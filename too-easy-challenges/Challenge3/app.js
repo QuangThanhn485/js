@@ -23,8 +23,8 @@ function NewGame()
   document.getElementById("current-0").innerHTML = player1;
   document.getElementById("current-1").innerHTML = player2;
 }
-
-function random() {
+function winlost()
+{
   if(count1 >= 100)
   {
     alert("player 1 đã thắng");
@@ -35,6 +35,9 @@ function random() {
     alert("player 2 đã thắng");
     return;
   }
+}
+function random() {
+  winlost();
   if(statuss === true)
   {
   random1()
@@ -81,7 +84,8 @@ function hold1()
   player1 = 0
   document.getElementById("current-0").innerHTML= player1;
   statuss = false;
-  random();
+  //random();
+  winlost();
 }
 function hold2()
 {
@@ -90,7 +94,8 @@ function hold2()
   player2 = 0;
   document.getElementById("current-1").innerHTML= player2;
   statuss = true;
-  random();
+  //random();
+  winlost();
 }
 
 function lost1() {
@@ -98,12 +103,12 @@ function lost1() {
   document.getElementById("current-0").innerHTML = player1;
   result = alert("player 1 đã thua lượt");
   statuss = false;
-  random();
+  //random();
 }
 function lost2() {
   player2 = 0;
   document.getElementById("current-1").innerHTML = player2;
   result = alert("player 2 đã đã thua lượt");
   statuss = true;
-  random();
+  //random();
 }
