@@ -9,11 +9,35 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-  return "One line only !!!";
+  // chuyển hết thành ký tự thường
+  // split
+  // filter chỉ lấy ký tự a tới z
+  // sắp xếp mảng
+  // ghép mảng thành 1 string
+  // so sánh 2 chuỗi với nhau
+  let char1 = cleanString(stringA);
+  let char2 = cleanString(stringB);
+  if(char1 === char2)
+  {
+    return true;
+  }
+  else
+  return false
+  //return "One line only !!!";
 }
+console.log(anagrams("rail safety", "fairy tales"));
+console.log(anagrams("RAIL! SAFETY!", "fairy tales"));
+console.log(anagrams("Hi there", "Bye there"));
 
-function cleanString(str) {
-  return "One line only !!!";
+function ignore(chars) {
+  return chars.length === 1 && chars.match(/[a-z]/i);
 }
-
+function cleanString(str ='') {
+  return str.toLowerCase().split('').filter(char => {
+    if (ignore(char)) {
+      return true;
+    }
+    return false;
+  }).sort().join('')
+}
 module.exports = anagrams;

@@ -15,7 +15,13 @@
 
 Create a JavaScript function that meets the following requirements:
 * Is passed an integer parameter, representing a number of Canadian cents.
+- truyền vô 1 tham số là 1 số ý nghĩa là đồng cent canada
 * The function uses the parameter to determine the smallest number of Canadian quarters, dimes, nickels and pennies that are equal to the given (parameter) amount.
+ - hàm này sử dụng số đó để in ra số đồng cho mỗi loại đồng:
+ + 1 quarter =  25 cent
+ + dimes: 10
+ + nickel: 5
+ + penny: 1
 * Displays the calculated information as illustrated below:
 
 ```Calling _two(80)```
