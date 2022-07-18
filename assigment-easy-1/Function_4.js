@@ -5,7 +5,7 @@ function countChar(String, char) {
 function cleanString(str = "", kt) {
   return str
     .toLowerCase()
-    .split(" ") // "asfrsfb chfh fhfhhf" => [asfsf, gsgs, hdyd]
+    .split(" ")
     .filter((char) => {
       if (char === kt) {
         return true;
