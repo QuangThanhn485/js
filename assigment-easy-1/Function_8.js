@@ -13,9 +13,7 @@ function getVowels(str = "") {
   const m = str.match(/[aeiou]/gi);
   return m === null ? [] : m;
 }
-
 function wordCount(word = "", str = "") {
-
     return getVowels(str).filter((char) => {
       if (char === word) {
         return true;
@@ -24,7 +22,6 @@ function wordCount(word = "", str = "") {
 }
 function displays(str = "") {
   for (let item  in remove_duplicates(getVowels(str))) {
-    //console.log(getVowels(str));
     console.log(getVowels(str[item]) + " = " + wordCount(getVowels(str)[item], str).length);
   }
 }
