@@ -50,4 +50,4 @@ function calculate(str, str1) {
   );
    return distance = (time2 -time1)/86400000;
 }
-console.log(calculate("June 14 2021", "June 20 2021"))
+console.log(calculate("June 14 2021", "June 20 2021")+" day")

@@ -16,7 +16,7 @@
   <title>JavaScript File Upload Example</title>
   <script type="text/javascript">
     function showFileSize() {
-      
+      let name = document.getElementById("").file[0].name ;
     }
   </script>
 </head>
