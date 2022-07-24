@@ -23,18 +23,17 @@ function NewGame() {
   document.getElementById("current-1").innerHTML = player2;
 }
 
-function winLost()
-{
-    if (count1 >= 100) {
-        alert("player 1 đã thắng");
-        return;
-      } else if (count2 >= 100) {
-        alert("player 2 đã thắng");
-        return;
-      }
+function winLost() {
+  if (count1 >= 100) {
+    alert("player 1 đã thắng");
+    return;
+  } else if (count2 >= 100) {
+    alert("player 2 đã thắng");
+    return;
+  }
 }
 function random() {
-    winLost()
+  winLost();
   if (statuss === true) {
     random1();
   } else random2();
@@ -57,9 +56,9 @@ function random1() {
   document.getElementById("current-0").innerHTML = player1;
 }
 function random2() {
-    let ran1 = Math.floor(Math.random() * (6 - 0)) + 1;
-    let returns1 = hash[ran1];
-    player2 += ran1;
+  let ran1 = Math.floor(Math.random() * (6 - 0)) + 1;
+  let returns1 = hash[ran1];
+  player2 += ran1;
 
   let ran = Math.floor(Math.random() * (6 - 0)) + 1;
   let returns = hash[ran];

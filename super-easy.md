@@ -1,4 +1,4 @@
-## Q. ***Write a program in javascript. sum(2)(3);***
+## . Q. ***Write a program in javascript. sum(2)(3);***
 
 **Example:** Expected output is 5
 
@@ -6,7 +6,7 @@
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How to validate file size and extension before upload? Please explain***
+## . Q. ***How to validate file size and extension before upload? Please explain***
 
 ```html
 <!DOCTYPE html>
@@ -40,7 +40,7 @@ File Extension: jpg
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Create captcha using javascript? Please explain***
+## . Q. ***Create captcha using javascript? Please explain***
 
 ```html
 <!DOCTYPE html>
@@ -67,7 +67,7 @@ File Extension: jpg
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Create a Stopwatch program in javascript? Please explain***
+## . Q. ***Create a Stopwatch program in javascript? Please explain***
 
 ```html
 <!DOCTYPE html>
@@ -93,7 +93,7 @@ File Extension: jpg
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Write a program to reverse a string? Please explain***
+## . Q. ***Write a program to reverse a string? Please explain***
 
 ```javascript
 console.log(reverseString("Hello")); 
@@ -105,7 +105,7 @@ console.log(reverseString("Hello"));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How to check if object is empty or not in javaScript? Please explain***
+## . Q. ***How to check if object is empty or not in javaScript? Please explain***
 
 ```javascript
 const obj = {};
@@ -116,7 +116,7 @@ console.log(isEmpty(obj)); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***JavaScript Regular Expression to validate Email***
+## . Q. ***JavaScript Regular Expression to validate Email***
 
 ```javascript
 console.log(validateEmail("thiendepwa21@yahoo.com")); // true
@@ -126,7 +126,7 @@ console.log(validateEmail("thiendepwa21@yahoo.com")); // true
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Use RegEx to test password strength in JavaScript? Please explain***
+## . Q. ***Use RegEx to test password strength in JavaScript? Please explain***
 
 ```javascript
 // Output
@@ -137,13 +137,15 @@ PASS
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How to compare objects ES6? (Answer with 3 solutions)***
-
+## . Q. ***How to compare objects ES6? (Answer with 3 solutions)***
+```
+ can use JSON.stringify , isEqual , "==="
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How to remove array element based on object property? Please explain***
+## . Q. ***How to remove array element based on object property? Please explain***
 
 ```javascript
 var myArray = [
@@ -170,13 +172,16 @@ myArray = [
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(+"meow"); // Explain
 ```
+```
+this show conten is "meow"
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var result;
@@ -185,15 +190,21 @@ for (var i = 5; i > 0; i--) {
 }
 console.log(result); // Explain
 ```
+```
+this show "0" looping we go from 5 to 0 , and print console value 0;
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var a = 1.2;
 console.log(typeof a); // Explain
 ```
+```
+  this display console is "number" that return a type data;
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var x = 10;
@@ -202,24 +213,30 @@ if (x) {
 }
 console.log(x); // Explain
 ```
-
+```
+  this show in console is value 10 , because var is globel so x  =  10
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(0.1 + 0.2 == 0.3); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+this return false because 0.1+0.2 = 0.30000000000000004 so 0.1 + 0.2 == 0.3 (false)
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(1 + -"1" + 2); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+this show value 2 because "-1" in the middle "+" so "-1" understood is -1 type number 
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function (x) {
@@ -228,12 +245,15 @@ console.log(1 + -"1" + 2); // Explain
   })(10);
 })(20); // Explain
 ```
+```
+this display value 20 , because paramater y not yet use in function
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var num = 20;
@@ -243,12 +263,14 @@ var getNumber = function () {
 };
 getNumber(); // Explain
 ```
-
+```
+this return is undefined because 'var num  = 10' decralation after use 'num'
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 function f1() {
@@ -257,14 +279,19 @@ function f1() {
 f1();
 console.log("window.num: " + window.num); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+display error because object window defined
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log("(null + undefined): " + (null + undefined)); // Explain
 ```
+```
+display "(null + undefined): NaN" because "(null + undefined)" not a number
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function () {
@@ -274,8 +301,10 @@ console.log("(null + undefined): " + (null + undefined)); // Explain
 console.log("value of a : " + a); // Explain
 console.log("value of b : " + b); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+display error message because don't find a in a,b in function()
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var y = 1;
@@ -284,8 +313,10 @@ if (function f() {}) {
 }
 console.log(y); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+display "1underfined" because f not yet assign values 
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var k = 1;
@@ -300,7 +331,7 @@ console.log(k); // Explain
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var k = 1;
@@ -310,8 +341,10 @@ if (1) {
 }
 console.log(k);// Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+ return '1function' because 'foo' is function
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log("(-1 / 0): " + -1 / 0); // Explain
@@ -319,8 +352,14 @@ console.log("(1 / 0): " + 1 / 0); // Explain
 console.log("(0 / 0): " + 0 / 0); // Explain
 console.log("(0 / 1): " + 0 / 1); // Explain
 ```
+```
+in ra (-1 / 0): -Infinity bởi vì số âm chia cho 0 ra âm vô cùng
+(1 / 0): Infinity 1 chia cho 0 ra dương vô cùng
+(0 / 0): NaN 0 chia 0 nên ra kết quả đây không phải là số ( NaN)
+(0 / 1): 0 bởi vì 0 /1 hiển nhiên bằng 0
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var a = 4;
@@ -333,19 +372,32 @@ console.log("(a * b): " + a * b); // Explain
 console.log("(a / b): " + a / b); // Explain
 console.log("(a % b): " + (a % b)); // Explain
 ```
-
+```
+in ra kết quả :(a + b): 45
+(a - b): -1
+(a * b): 20
+(a / b): 0.8
+(a % b): 4
+b là kiểu string nhưng nó được sủ dụng như kiểu interger nên được hiểu là kiểu interger
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log("MAX : " + Math.max(10, 2, NaN)); // Explain
 console.log("MAX : " + Math.max()); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+in ra kết quả :
+MAX : NaN
+MAX : -Infinity
+nếu bất kỳ đối số nào được truyền vào không thể chuyển đối thành 1 số thì kết quả trả về NaN
+nếu không tìm thấy đối số nào có thể chuyển đổi thành 1 số thì trả về -Ifninity (âm vô cùng)
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function () {
@@ -355,8 +407,14 @@ console.log("MAX : " + Math.max()); // Explain
 console.log("a defined? " + (typeof a !== "undefined")); // Explain
 console.log("b defined? " + (typeof b !== "undefined")); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+kết quả in ra là :
+a defined? false
+b defined? true
+bởi vì giá trị của b = 3  mang giá trị không phải là 'undefined' nên kết quả trả về sẽ là true
+còn a nó không được gián giá trị như theo cách phía trên( không mang giá trị ) nên nó bằng 'undefined' nên kết quả trả về là false
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var myObject = {
@@ -373,19 +431,32 @@ var myObject = {
 };
 myObject.func();
 ```
-
+```
+kết quả in ra : 
+outer func:  this.foo = bar
+outer func:  self.foo = bar
+inner func:  this.foo = undefined
+inner func:  self.foo = bar
+trường hợp đầu tiên sẽ lấy ra được giá trị như bình thường, nhưng đến trường hợp thứ 2, funtion được lồng vô trong 1 object menthod lúc này dùng this sẽ không lấy được giá trị, ta nên dùng từ khóa self sẽ lấy được giá trị vì seld chí là this của menthod func 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(0.1 + 0.2); // Explain
 console.log(0.1 + 0.2 == 0.3); // Explain
 ```
+```
+kết quả in ra là : 
+0.30000000000000004
+false
+bời vì theo như kết quả nhận được  từ 0.1 +0.2 =0.30000000000000004 nên 0.1+0.3 nó sẽ không bằng 0.3 ( kết quả trả về là false)
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function () {
@@ -400,8 +471,15 @@ console.log(0.1 + 0.2 == 0.3); // Explain
 })();
 // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+kết quả in ra là 
+1
+4
+3
+2
+ta thấy nó không in ra theo thứ tự bởi vì ta đã dùng setTimeout() (đây là một hàm bất đồng bộ) , nên số 2 được in ra sau 1s nữa trong khoản thời gian đấy chương trình đã thực hiện in ra 3 và 4 , sau khi  kết thúc 1s số 2 mói được in ra ( in ra sau số 3 và 4)
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var arr1 = "john".split("");
@@ -411,8 +489,16 @@ arr2.push(arr3);
 console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1)); // Explain
 console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1)); // Explain
 ```
+```
+kết quả in màng hình là 
+array 1: length=5 last=j,o,n,e,s
+array 2: length=5 last=j,o,n,e,s
+arr2.push(arr3); hành động này đã thêm Array arr3 vào arr2 (vào element cuối cùng của arr2) và cũng kéo theo arr1 bị thay đổi theo 
+menthod slice() được truyền vào số âm điều này có nghĩa nó sẽ lấy các element từ dưới lênh trên (từ cuối về trước) mà element cuối của arr1 và arr2 là một arr3
+nên kết quả trả về là err3
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(1 + "2" + "2"); // Explain
@@ -422,12 +508,21 @@ console.log(+"1" + "1" + "2"); // Explain
 console.log("A" - "B" + "2"); // Explain
 console.log("A" - "B" + 2); // Explain
 ```
+```
+kết quả được in ra là
+122  // số cộng với 2 chuỗi 
+32 // "2" là kiểu string nhưng +"2" là số nguyên , như vậy ta có phép toán 1+2 = 3 ; và kế tiếp 3+"2" (dấu cộng lúc này có vai trò là cộng chuỗi)
+02 // tương tự như trên 1-1 =0
+112 // cộng chuỗi lại với nhau
+NaN2 // 2 chuỗi không thể trừ cho nhau nên trả về NaN( không phải số ), và cộng "2"(kiểu string)
+NaN // như trường hợp ở trên nhưng số 2 lúc này không còn là kiểu string nữa nên só 2 đã không được hiển thị
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 for (var i = 0; i < 5; i++) {
@@ -437,8 +532,17 @@ for (var i = 0; i < 5; i++) {
 }
 // Explain
 ```
+```
+màng hình hiển thị kết quả
+5
+5
+5
+5
+5
+vòng lặp for được thực hiện 5 lần mõi lần như vậy in ra số 5 sau 1s nhờ vào menthod setTimeout()
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 for (var i = 0; i < 5; i++) {
@@ -450,8 +554,17 @@ for (var i = 0; i < 5; i++) {
 }
 // Explain
 ```
+```
+in màng hình 
+0
+1
+2
+3
+4
+vòng lặp for có 5 vòng lặp và mỗi vòng lặp như vậy cho in ra giá trị biến i, thời gian đển in cho mỗi lần là 1s biến i tăng dần cho mỗi vòng lặp
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log("0 || 1 = " + (0 || 1)); // Explain
@@ -459,19 +572,38 @@ console.log("1 || 2 = " + (1 || 2)); // Explain
 console.log("0 && 1 = " + (0 && 1)); // Explain
 console.log("1 && 2 = " + (1 && 2)); // Explain
 ```
-
+```
+kết quả in 
+0 || 1 = 1 // vì 0 trả về giá trị là false nên hiển thi 1
+1 || 2 = 1 // tương tụ như trên (vì 1 là true nên hiển thị 1)
+0 && 1 = 0 // cả hai phải trả về là true còn không thì kết quả sẽ ra false
+1 && 2 = 2 // tương tự như trên
+các biểu thức xẽ trả về false gồm có 
+false;
+null;
+NaN;
+0;
+empty string ("" or '' or ``);
+undefined
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(false == "0"); // Explain
 console.log(false === "0"); // Explain
 ```
+```
+kết quả in ra 
+true // so sánh giá trị kiểu bool với nhau số 0 tương ứng với kiểu bool là false 
+false //  só sách giá trị và cả kiểu dữ liệu vì số 0 là kiểu interger nên không thể bằng với kiểu bool là false được
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var a = {},
@@ -482,8 +614,12 @@ a[b] = 123;
 a[c] = 456;
 console.log(a[b]); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+in ra kết quả 
+456
+vì a nó nhận giá trị cuối cùng được truyền vào vì nó có chung 1 key
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(
@@ -492,8 +628,13 @@ console.log(
   })(10)
 ); // Explain
 ```
+```
+kết quả in ra là 
+3628800
+phía trên dùng toán tử 3 ngôi kết hợp với đệ quy , nếu n > 1 = true thì thực hiện n *f(n-1) cứ như vậy n mỗi lần chạy trên vòng lặp đệ quy nó sẽ giảm đi 1 giá trị 10 , 9 , 8 ... 1 . và sau đó bắt đầu return ra giá trị của n * f(n-1) cứ như vậy giá trị được nhân lênh nhiều lần 10 vòng đệ quy kết quả cuối cùng là 3628800
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function (x) {
@@ -502,12 +643,16 @@ console.log(
   })(2);
 })(1);
 ```
-
+```
+in ra
+1
+vì function lồng bênh trong  có truyền tham số nhưng không được sủ dụng để in ra
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var hero = {
@@ -521,8 +666,12 @@ var stoleSecretIdentity = hero.getSecretIdentity;
 console.log(stoleSecretIdentity()); // Explain
 console.log(hero.getSecretIdentity()); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+kết quả in ra 
+undefined // ở đây tại vì nó gọi ngay đến function phía trong nên nó không đọc được giá trị của biến _name
+John Doe 
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var length = 10;
@@ -541,12 +690,17 @@ var obj = {
 obj.method(fn, 1);
 // Explain
 ```
+```
+kết quả in ra 
+undefined // ở đây dùng từ khóa this là thuộc về global nên nó không nhận được giá trị của biến lenght
+2 // arguments nó lấy giá trị theo tham số truyền vào và được truy cập như kiểu array, vì đã gọi đến function fn (trong hàm này có sử dụng this.lenght) nên nó lấy ra độ dài của phần tử bênh trong và trả về giá trị là 2 (vì đã truyền vào 2 tham số)
 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 (function () {
@@ -562,8 +716,15 @@ obj.method(fn, 1);
 })();
 // Explain
 ```
+```
+in màng hình
+1 // lấy giá trị từ biến x
+undefined // không thể lấy giá trị của biến x (kiểu var) vì phạm vi của biến x nằm trong scoped khối catch()
+2 // lấy dược vì đây là golbal
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var x = 21;
@@ -573,21 +734,34 @@ var girl = function () {
 };
 girl();
 ```
+```
+in ra
+undefined
+bởi vì có 2 biến trùng tên nhau nên sẽ nhận biến nằm trong cùng scoped nhưng biến x cùng scoped này lại khai báo sau khi log, nên nó không nhận được giá trị
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(1 < 2 < 3); // Explain
 console.log(3 > 2 > 1); // Explain
 ```
+```
+in ra
+true // vì 2 lớn hơn 1 và nhỏ hơn 3 nên kết quả tra true
+false // vì nó so sánh 3>2 trả về true và tiếp tục true > 1 (cái này thì false)
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 console.log(typeof typeof 1); // Explain
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+kết quả in ra
+string // typeof in ra kiễu dữ liệu , sô 1 là kiểu number mà typeof 1 nó sẽ cho ra 'number' đây là kiểu string, nên tiếp tục dùng typeof thêm lần nữa nó sẽ trả về kết quả string
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var b = 1;
@@ -602,38 +776,54 @@ function outer() {
 }
 outer();
 ```
+```
+in ra
+3
+vì nó nhận biến b trong cùng scoped mặc dù trước đó b có +1 nhưng nó đã được đặt lại là  =3 nên vẫn giữ nguyên.
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Hoisting example in javascript? Please explain***
+## . Q. ***Hoisting example in javascript? Please explain***
 
 ```javascript
 x = 10;
 console.log(x);
 var x; // Explain
 ```
+```
+in ra 
+10
+nó in ra giá trị của x = 10 vì nó đọc từ trên xuống
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 const arr = [1, 2];
 arr.push(3); // Explain
 ```
+```
+số 3 đã được thêm vào mảng arr, được thêm vào vị trí cuối cùng
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var o = new F();
 o.constructor === F;
+```
+```
+xuất hiện lỗi vì F chưa được định nghĩa nên không thể thực hiện phép toán  ===
 ```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 let sum = (a, b) => {
@@ -641,8 +831,13 @@ let sum = (a, b) => {
 };
 console.log(sum(10, 20)); // Explain
 ```
+```
+in ra
+undefined
+vì function thực hiện tính toán nhưng không trả về bất cứ cái gì (không return)
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var arr = ["javascript", "typescript", "es6"];
@@ -653,8 +848,12 @@ var searchValue = (value) => {
 };
 console.log(searchValue("script"));
 ```
-
-## Q. ***Write the program using fatarrow function? Please explain***
+```
+kết quả in ra là
+[ 'javascript', 'typescript' ]
+vì nó tìm trong mảng arr phần tử nào có chứa 'script' thì in ra màng hình
+```
+## . Q. ***Write the program using fatarrow function? Please explain***
 
 ```javascript
 var a = [1, 2, 3, 4];
@@ -663,8 +862,11 @@ function sumUsingFunction(acc, value) {
 }
 var sumOfArrayUsingFunc = a.reduce(sumUsingFunc);
 ```
-
-## Q. ***Write a program that prints the numbers from 1 to 15. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”? Please explain***
+```
+error
+ không thể định nghĩa sumUsingFunc vì function này không tồn tại
+```
+## . Q. ***Write a program that prints the numbers from 1 to 15. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”? Please explain***
 
 Output:
 
@@ -690,18 +892,21 @@ FizzBuzz
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var output = (function (x) {
   delete x;
   return x;
 })(0);
-
 console.log(output); // Explain
 ```
-
-## Q. ***What will be the output of the following code? Please explain***
+```
+in ra 
+0
+bởi vì delete không thể xóa được giá trị của một biến nó chỉ xóa được object và property
+```
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var x = 1;
@@ -712,12 +917,17 @@ var output = (function () {
 
 console.log(output); // Explain
 ```
+```
+in ra
+1
+nhân giá trị của biến x , delete không thể xóa được giá trị của một biến nó chỉ xóa được object và property
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var x = { foo: 1 };
@@ -728,8 +938,12 @@ var output = (function () {
 
 console.log(output); // Explain
 ```
-
-## Q. ***What will be the output of the following code? Please explain***
+```
+in ra
+undefined
+bời vì x.foo là một property nên delete đã xóa thành công giá trị của nó
+```
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var Employee = {
@@ -739,20 +953,28 @@ var emp1 = Object.create(Employee);
 delete emp1.company;
 console.log(emp1.company); // Explain
 ```
-
+```
+in ra
+xyz
+không thể xóa một biến đã khai báo bằng var ("var emp1")
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var trees = ["xyz", "xxxx", "test", "ryan", "apple"];
 delete trees[3];
 console.log(trees.length); // Explain
 ```
-
-## Q. ***What will be the output of the following code? Please explain***
+```
+in ra
+5
+giá trị tại index 3 đã được loại bỏ nhưng nó đã thay thế vào một <1 empty item> điều vẫn sẽ chiếm chổ trong mảng
+```
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var bar = true;
@@ -761,12 +983,25 @@ console.log(bar + "xyz"); // Explain
 console.log(bar + true); // Explain
 console.log(bar + false); // Explain
 ```
-
+```
+in ra
+1 // true là số 1 nếu bool cộng với number kết quả true + 0 = 1
+truexyz 
+2
+1
+phía  dưới là hướng dẫn cho toán tử bổ sung
+Number + Number -> phép cộng
+Boolean + Number -> phép cộng
+Boolean + Number -> phép cộng
+Number + String -> phép nối
+String + Boolean -> phép nối
+String + String -> phép nối
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var z = 1,
@@ -781,8 +1016,13 @@ var y;
 z = typeof y;
 y = z;
 ```
+```
+kết in ra
+undefined
+vì không thể xác định được kiểu dữ liệu của y trong khi đó y chưa được gán giá trị
+```
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 // NFE (Named Function Expression)
@@ -791,7 +1031,10 @@ var foo = function bar() {
 };
 typeof bar();
 ```
-
+```
+error 
+vì function bar đã thuộc về foo nên ta không thể gọi trực tiếp bar mà phải gọi foo để xác định kiểu của bar()
+```
 **Sample 1**
 
 ```javascript
@@ -827,7 +1070,7 @@ var foo = function bar() {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output of the following? Please explain***
+## . Q. ***What is the output of the following? Please explain***
 
 ```javascript
 bar();
@@ -838,8 +1081,12 @@ function bar() {
   console.log("bar got called"); 
 }
 ```
-
-## Q. ***What will be the output of the following code? Please explain***
+```
+in ra 
+bar got called // function này đã được gọi từ ra từ đầu
+something // function này được gọi ra ngay khi nó được tạo ra
+```
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var salary = "1000$";
@@ -851,6 +1098,12 @@ var salary = "1000$";
 
   console.log("My New Salary " + salary); // Explain
 })();
+```
+```
+in ra
+Original salary was undefined // vì trong function có một biến được đặt tên trùng với tên bênh ngoài scope nên nó chỉ nhân giá trị của biến bênh trong scope mà cái biến này lại được khai báo sau khi log được dược sử dụng nên nên nó không tìm thấy giá trị của nó
+My New Salary 5000$ // trường hợp này là vì log sử dụng sau khi biến được tạo ta và khởi tạo giá trị nên nó in ra được giá trị ra màng hình
+
 ```
 
 ```javascript
@@ -865,12 +1118,15 @@ var salary = "1000$";
   console.log("My New Salary " + salary); // Explain
 })();
 ```
+```
+y chan câu phía trên
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of the following code? Please explain***
+## . Q. ***What would be the output of the following code? Please explain***
 
 ```javascript
 function User(name) {
@@ -880,12 +1136,18 @@ function User(name) {
 var person = (new User("xyz")["location"] = "USA");
 console.log(person); // Explain
 ```
+```
+in ra
+USA
+vì đã truyền tham số 'USA' vào đối số name trong hàm User
+và kết quả trả về là USA theo như tham số truyền vào
 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var strA = "hi there";
@@ -893,12 +1155,17 @@ var strB = strA;
 strB = "bye there!";
 console.log(strA); // Explain
 ```
+```
+in ra
+hi there
+vì nó log ra strA mà strA lúc này đang mang giá trị "hi there" cho dù strB có bị thay đổi vì biến thì nó lưu trữ trực tiếp giá trị lênh ô nhớ stack và độc lạp với nhau không như object (nó chứa địa chỉ trên stack trỏ tới cùng vùng nhớ trên heap)
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var objA = { prop1: 42 };
@@ -906,8 +1173,12 @@ var objB = objA;
 objB.prop1 = 90;
 console.log(objA); // Explain
 ```
-
-## Q. ***What would be the output of following code? Please explain***
+```
+in ra
+{ prop1: 90 }
+vì ban đầu "prop1 : 42" nhưng objB đã thay đổi nó khéo theo obj1 cũng bị thay đổi do (obj1 = obj2) (do đây là một object nên nó bị thay đổi theo như đã giải thích ở bài trước ) nên giá trị ban đầu đã đổi thành 42 thành 90
+```
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var objA = { prop1: 42 };
@@ -915,12 +1186,16 @@ var objB = objA;
 objB = {};
 console.log(objA); // Explain
 ```
-
+```
+in ra 
+{ prop1: 42 }
+vì lần này object objB trống nên giá trị property của objA không thay đổi vẫn là prop1 :42
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var arrA = [0, 1, 2, 3, 4, 5];
@@ -928,8 +1203,12 @@ var arrB = arrA;
 arrB[0] = 42;
 console.log(arrA); // Explain
 ```
-
-## Q. ***What would be the output of following code? Please explain***
+```
+in ra 
+[ 42, 1, 2, 3, 4, 5 ]
+element đầu tiên đã bị thay đổi điều nay là do arrB đã thay đổi giá trị tại vị trí index = 0  và arrB =arrA điều này đã làm cho arrA thay đổi theo arrB lúc này tại index = 0 của arrA = 42 nên khi in arrA ra ta được [ 42, 1, 2, 3, 4, 5 ]
+```
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var arrA = [0, 1, 2, 3, 4, 5];
@@ -937,12 +1216,16 @@ var arrB = arrA.slice();
 arrB[0] = 42;
 console.log(arrA); // Explain
 ```
-
+```
+in ra
+[ 0, 1, 2, 3, 4, 5 ]
+cũng như trên nhưng lần này arrA đã không bị thay đổi theo arrB điều này là do arrA.slice().  slice() là hàm sẽ trả về một chuỗi mới từ arrA (tạo ra vùng nhớ mới trong ô nhớ),  không liên quan đến arrA nữa nên arrA không bị thay đổi theo arrB
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var arrA = [
@@ -956,8 +1239,12 @@ var arrB = arrA;
 arrB[0].prop1 = 42;
 console.log(arrA); // Explain
 ```
-
-## Q. ***What would be the output of following code? Please explain***
+```
+in ra 
+[ { prop1: 42 }, { someProp: 'also value of array A!' }, 3, 4, 5 ]
+mảng arrA đã bị thay đổi theo arrB theo như cách của mấy bài toán trước cụ thể nó thay đổi giá trị prop1 =  "value of array A!!" thành prop1 = 42 như arrB đã thay đổi 
+```
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var arrA = [
@@ -972,7 +1259,11 @@ arrB[0].prop1 = 42;
 arrB[3] = 20;
 console.log(arrA); // Explain
 ```
-
+```
+in ra
+[ { prop1: 42 }, { someProp: 'also value of array A!' }, 3, 4, 5 ]
+trong lần này chỉ mỗi các thành phần là object bị thay đổi giá trị property ban đầu của chúng ở arrA các thành phần còn lại đều không bị ảnh hưởng nhờ arrA.slice()  ( slice() sẻ cho ra một mảng mới từ arrA)
+```
 ```javascript
 function slice(arr) {
   var result = [];
@@ -982,21 +1273,23 @@ function slice(arr) {
   return result; // Explain
 }
 ```
-
+```
+hàm slice() ban đầu khai báo array result trống, qua vòng lặp từng phần tử của arr(aray) được truyền vào cho mảng result, rồi cuối cùng trả về array result mang toàn bộ giá trị phần từ của mảng arr được truyền vào hàm
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***console.log(employeeId);***
+## . Q. ***console.log(employeeId);***
 
 1.  Some Value
 2.  Undefined
 3.  Type Error
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 console.log(employeeId);
@@ -1008,9 +1301,9 @@ var employeeId = "19000";
 3.  Type Error
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 // tại vì employeeid được khai báo và khời tạo sau khi in log()
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "1234abe";
@@ -1025,13 +1318,13 @@ var employeeId = "1234abe";
 3.  Type Error
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 // tên biến trùng nhau nên lấy biến trong cùng scope mà cái biến này lại khai báo sau khi in log() nên nó không nhân được giá trị
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "1234abe";
@@ -1049,9 +1342,9 @@ var employeeId = "1234abe";
 3.  '1234abe'
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // giống như trường hợp bênh trên, còn cái function lồng vào trong kia có biến var trong đấy chỉ có tác dụng bênh trong đấy .
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1067,13 +1360,13 @@ _Answer_and_Explain:
 3.  'Hi I am inside displayFunc'
 4.  ReferenceError: displayFunc is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // displayFunc dược tạo ra sau khi in log nên nó không nhân được giá trị bênh trong còn "    console.log("Hi I am inside displayFunc");" thì nằm bênh trong function mà function này tạo ra mà chưa được gọi thông qua 
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "abc123";
@@ -1090,9 +1383,9 @@ console.log(employeeId);
 3.  'abc123'
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 // tại vì ban đầu employeeId = "abc123" nhưng sau đó hàm foo() được gọi ra. hàm này gán lại giá trị cho employeeId thành 123bcd nên cuối cùng employeeId mang giá trị là 123bcd rồi in ra màng hình
 
-## Q. ***What would be the output of following code? Please explain***
+##  . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "abc123";
@@ -1112,13 +1405,13 @@ console.log(employeeId);
 3.  'abc123'
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // cũng như trường hợp ở trên nhưng lần này có thêm dòng "function employeeId() {}" dòng này có tác dụng tương đương với "const employeeId = () => {}" (gán vào 1 function trống) điều này có thể hiểu đã làm cho phép gán trước đó bị hủy bỏ vậy nên nó lấy giá trị ban đầu khởi tạo là abc123
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "abc123";
@@ -1139,9 +1432,9 @@ foo();
 3.  string
 4.  ReferenceError: employeeId is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // function employeeid đã log ra kiểu dữ liệu của chính nó, còn giá trị abc123 do nó mằn bênh ngoài(không cùng scope) nên đã ưu tiên lấy tên function bênh trong
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function foo() {
@@ -1161,13 +1454,13 @@ foo();
 3.  'Car'
 4.  ReferenceError: product is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // function employeeId được gọi trước khi biến product kịp nhận giá trị nên product trong function employeeid không có giá trị
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function foo() {
@@ -1189,13 +1482,13 @@ _Answer_and_Explain:
 3.  function function
 4.  ReferenceError: bar is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // do cả hai abc và bar đều là function nên khi dùng typeof nó trả về giá trị là tên kiểu dữ liệu ta được kết quả là in ra 2 cái function
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1221,13 +1514,13 @@ _Answer_and_Explain:
 3.  ["name", "salary", "country", "phoneNo"]
 4.  ["name", "salary", "country"]
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // Object .key() nó lấy tất cả key của các property có trong object và trả về là một Array tham số truyền vào là object cần lấy key property
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1253,13 +1546,13 @@ _Answer_and_Explain:
 3.  ["name", "salary", "country", "phoneNo"]
 4.  ["name", "salary", "country"]
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4 // cũng như  ở trên nhưng lần này đặt enumerable  = false (giá trị này nếu không set thì mặc định là false), điều này làm cho thuộc tính không được liệt kê trên object
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1281,7 +1574,7 @@ _Answer_and_Explain:
 3.  true false
 4.  true true
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // vì 2 đối tượng là 2 địa chỉ tham chiếu khác nhau trên stack mặc dù nó có cùng 1 giá trị ( so sách bằng khi khác ô nhớ trên stack thì giá trị sẽ là false mặc dù cho có cùng giá trị )
 
 ## Q. ***What would be the output of following code? Please explain***
 
@@ -1299,13 +1592,13 @@ _Answer_and_Explain:
 3.  true false
 4.  true true
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // cũng giống như trường hợp trên 2 object được tạo ra không cùng 1 địa chỉ tham chiếu đến vùng nhớ stack so sánh với nhau sẻ cho ra giá trị false
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1325,9 +1618,9 @@ _Answer_and_Explain:
 3.  true false
 4.  true true
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // cũng như trên so sách 2 object khác nhau thì sẽ trả về false
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1345,13 +1638,13 @@ _Answer_and_Explain:
 3.  true false
 4.  true true
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // y chan trường hợp phía trên đều là 2 object
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1369,9 +1662,9 @@ _Answer_and_Explain:
 3.  true false
 4.  true true
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4 // trong trường hợp này mặc dù so sách 2 obj với nhau nhưng trả về giá trị là true bởi vì nó đã convert sang kiểu string và 2 đối tượng so sánh bây giờ là kiểu string chứ không phải là kiểu obj nữa
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1391,13 +1684,13 @@ _Answer_and_Explain:
 3.  true true true true
 4.  true true false false
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // bởi vì objB hiện tại đang gán object là objA nên objB === objA cho ra true và so sánh value của property với nhau cũng vậy
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1416,9 +1709,9 @@ _Answer_and_Explain:
 3.  foo foo
 4.  bar foo
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 vì 2 cái array này nó trỏ đến cùng một vùng nhớ trên heap nên khi arrB thay đổi thì tạo ra một nhớ mới trên heap và cả arrA và arrB đều tham chiếu tới và hiễn nhiên arrA cũng vị vậy mà thay đổi từ 'foo' thành 'bar'
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1439,13 +1732,13 @@ _Answer_and_Explain:
 3.  foo foo
 4.  bar foo
 
-_Answer_and_Explain:
+_Answer_and_Explain:3 //vì ở đây như trên nhưng lần này thêm delete objA.foo , hành động này đã xóa đi ô nhớ mới do objB tạo ra và cả hai trỏ lại ô nhớ củ trên heap
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1466,9 +1759,9 @@ _Answer_and_Explain:
 3.  foo foo
 4.  undefined bar
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // vì không sử dụng Object.create() như bài trước nên khi arrB được gán giá trị mới thay vì tạo ra một ô nhớ mới trên heap nó sẽ ghi đè lênh ô nhớ cũ, lúc này chỉ có 1 ô nhớ mà cả hai Array đang trỏ tới và hành động tiếp theo "delete objA.foo" đã xóa đi ô nhớ duy nhất mà cả hai đang trỏ vào, vậy nên khi log value ra thì sẽ là undefined
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1483,13 +1776,13 @@ _Answer_and_Explain:
 3.  ["100"] 1
 4.  ReferenceError: array is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // đầu tiên nó log ra tất cả giá trị trong Array, sau đó nó log ra độ dài của array đấy ( có bao nhiêu phần tử)
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1508,9 +1801,15 @@ _Answer_and_Explain:
 3.  [] [] ['1',2,'3',4,5.6] 5
 4.  [] [] [Array[5]] 5
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 
+```
+[]                          //đây là một array để trống không có element bênh trong
+[ <100 empty items> ]       //đây là một array nhưng nó lại truyền vào độ dài của array là 100 và không hề có value
+[ [ '1', 2, '3', 4, 5.6 ] ] //đây là 1 array bênh trong có 1 element cũng là 1 array
+1                           //vì chỉ có 1 element (element đó là array) nên lengh là = 1
+```
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1526,13 +1825,13 @@ _Answer_and_Explain:
 3.  6
 4.  undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // bởi vì ta dã gán vào index 10 mang giá trị 'f' nên nó tạo ra các element trống ở khoản giữa (lúc này lengh = 11) tiếp theo thực hiện delete array[10] tức là value tại index = 10 (hiện tại đang là 'f') bị xóa nhưng vẫn dể lại một element trống ( không có value ) vì thế nên lấy ra độ dài của array vẫn bằng 11 mặc dù đã xóa đi 1 phần tử index
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1550,7 +1849,7 @@ _Answer_and_Explain:
 
 _Answer_and_Explain:
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1566,13 +1865,13 @@ _Answer_and_Explain:
 3.  Type Error
 4.  undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // đầu tiên khởi tạo array animal và khởi tạo 2 giá trị vào trong array ban đầu thêm 'cat' vào cuối mảng ("cow", "horse","cat"), tiếp theo thêm "dog", "rat", "goat" vào đầu mảng ta được mảng mới 'dog', 'rat', 'goat', 'cow', 'horse', 'cat'
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1589,9 +1888,15 @@ _Answer_and_Explain:
 3.  1 -1 -1 -1
 4.  1 undefined -1 4
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 
+```
+1 // tìm kiếm số 1 trong mảng và trả vê index của phần tử đấy
+-1 // không tìm thấy vì chỉ mục không được sử dụng cho object và array ( không tìm thấy nên trả về -1)
+-1 // tương tự như trên
+4 //chữ e nằm ở index thứ 4 trong string
+```
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1607,13 +1912,19 @@ _Answer_and_Explain:
 3.  1 1 -1
 4.  1 undefined undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 
+```
+1 // đây là tìm index nào có giá trị là 1
+6 // đây cũng là tìm kiếm index nhưng là tìm từ vị trí index thứ 3 trờ về sau, 
+-1 // cái này như trên nhưng là tìm từ index 10 trờ về sau ( vì mảng này chỉ có tối đa 10 index nên không còn tìm thấy gì ở đằng sau đó nữa nên trả về -1)
+
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1636,9 +1947,13 @@ _Answer_and_Explain:
 3.  [ 2, 4, 8, 12, 16 ] true
 4.  [ 2, 4, 8, 12, 16 ] false
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3
+```
+[ 2, 4, 8, 12, 16 ] // đây là một mảng mới được chọn lọc ra từ mảng củ theo điều kiện chia hết cho 2
+true // kiểm tra xem trong array number có phần từ nào chia hết cho 3 không nếu có trả về true , và nó đã tìm thấy
+```
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1671,13 +1986,13 @@ _Answer_and_Explain:
    [ 2, '12', true,false ]
    [ 2, '12', true,false]
 
-_Answer_and_Explain:
+_Answer_and_Explain:1 // thật ra Object ,String,Number,Boolean đều là function nó trả về giá trị true nếu có 2, "12", và true
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1711,9 +2026,9 @@ _Answer_and_Explain:
    []
    [ 'foo', 'bar', 'john', 'ritz' ]
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 // menthod slice() nó trả về một array mới từ một phần của array củ bắt đầu từ vị trí index truyền vào cho đến hết array cũ
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1729,13 +2044,19 @@ _Answer_and_Explain:
 3.  [ 'bar', 'john' ] [ 'bar', 'john' ] [ 'bar', 'john' ]
 4.  [ 'bar', 'john' ] [] []
 
-_Answer_and_Explain:
+_Answer_and_Explain:1 
+```
+[ 'bar', 'john' ] // cắt lấy các phần tử từ index 1 trở đi
+[] // lấy phần tử giữa index 1 và index 2 (vì không có gì ở giữa 2 index liền kề này nên kết quả la trống)
+[ 'foo' ] vì mảng List đã bị chia cắt từ trước đó nên hiện tại chỉ còn lại 1 phần tử
+
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -1750,9 +2071,9 @@ _Answer_and_Explain:
 3.  [ 15, 16, 2, 23, 42, 8 ]
 4.  [ 2, 8, 15, 16, 23, 42 ]
 
-_Answer_and_Explain:
+_Answer_and_Explain:3 // vì mặt định method sort() nó sắp xếp số theo thứ tự bản chữ cái chứ không phải là số nhỏ đến số lớn nhất
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function funcA() {
@@ -1775,13 +2096,13 @@ console.log(funcA());
 3.  Type Error
 4.  ReferenceError: this is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // trả về tất cả các giá trị object mà this tham chiếu đến (object ở đây hiện tại là window)
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var obj = {
@@ -1799,9 +2120,9 @@ console.log(obj.innerMessage);
 3.  Type Error
 4.  undefined true
 
-_Answer_and_Explain:
+_Answer_and_Explain:2 // this hiện tại đang lấy tham chiếu đến cái function đang chứa nó nên nó không nhân dược giá trị từ obj
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var obj = {
@@ -1819,13 +2140,13 @@ console.log(obj.innerMessage());
 3.  Type Error
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // this tham chiếu đến property của cùng object 
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var obj = {
@@ -1844,9 +2165,9 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain:3 // this lúc này đang trỏ đến cái function lồng bênh trong nên nó ko lấy được giá trị property từ obj
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var obj = {
@@ -1866,13 +2187,13 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: self.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // this lúc này tham chiếu tới obj ta cùng biến self để chứa giá trị của this đang tham chiếu tới nên bây h biến self đang mang giá trị và có thể sử dụng ở trong 1 đói tượng khác
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function myFunc() {
@@ -1888,9 +2209,9 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // function hiện tại không có chứa property nào là message cả nên không tìm thấy
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function myFunc() {
@@ -1906,13 +2227,13 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // bời vì function đã thêm  property là message nên this nó sẽ tham chiếu và lấy giá trị được
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function myFunc() {
@@ -1927,9 +2248,9 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // cung tương tự như trường hợp trên nhưng lần này nó tạo property bênh trong function
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function myFunc(param1, param2) {
@@ -1945,13 +2266,13 @@ console.log(myFunc("a", "b", "c", "d"));
 3.  undefined
 4.  ReferenceError
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 //tại vị có 2 tham số truyền vào function sau đó lấy ra độ dài của function thì nó lấy ra được 2 phần tử chính là 2 tham số truyền vào mặc dù chúng chưa mang giá trị
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function myFunc() {
@@ -1967,9 +2288,9 @@ console.log(myFunc("a", "b", "c", "d"));
 3.  undefined
 4.  ReferenceError
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 //arguments.length lấy tra số lượng tham sô truyền vào function
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function Person(name, age) {
@@ -1995,7 +2316,11 @@ Person.displayName();
 3.  John undefined
 4.  John John
 
-_Answer_and_Explain:
+_Answer_and_Explain:  1
+```
+John   // ở đây ta khởi tạo person và truyền đối số name  = "John" và trong function (function cũng được coi là object) cũng tạo ra 1 property là name và ngán nó bằng đối số name truyền vào vì là peoperty nên sử dụng this sẽ tham chiếu đến được
+Person // trường hợp này nó đã nằm bênh ngoài scope của function person , nên nó không thể lấy được property name = jodn , nên ta sử dụng this.name thì sẽ được hiểu là đang lấy tên của function (person)
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2022,9 +2347,9 @@ console.log(userInfo.userName);
 3.  12345678 undefined
 4.  undefined undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 3 // this chỉ có tác dụng trong cùng scope mang ra ngoài không được
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "aq123";
@@ -2039,13 +2364,13 @@ console.log(Employee.employeeId);
 3.  bq1uy
 4.  undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4 // this không thể mang ra bênh ngoài sử dụng khi không cùng scope
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "aq123";
@@ -2065,9 +2390,15 @@ console.log(new Employee().employeeId);
 3.  bq1uy 1BJKSJ kj182
 4.  undefined 1BJKSJ kj182
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2
+```
+bq1uy  //this lúc này tham chiếu đến object là window nên sử dụng được ,
+1BJKSJ //không phát hiện trong function có property nào là JobId, nhưng trước đó đã khởi tạo thêm property bằng cách sử dụng prototype tạo JobId và gán giá tri cho nó 
+bq1uy  // vì phát hiện bênh trong function có property này nên nó nhận và trả về giá trị này mà không nhân giá trị ở chổ khác nữa
 
-## Q. ***What would be the output of following code? Please explain***
+```
+
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 var employeeId = "aq123";
@@ -2086,13 +2417,17 @@ var employeeId = "aq123";
 3.  aq123 aq123
 4.  foo123 undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1
+```
+foo123 // vì ngoại lệ đã được ném ra thông qua throw nên nó nhận giá trị employeeId của ngoại lệ thay vì nhận employeeId của object window
+aq123 // nhận trực tiếp giá trị của employeeId 
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -2109,9 +2444,9 @@ _Answer_and_Explain:
 3.  World
 4.  [ 'W', 'o', 'r', 'l', 'd' ]
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4 // bởi vì filter trả về là một Array, điều kiện bênh trong là chỉ lấy các giá trị có index > 5 nên "hello world" chỉ lấy từ ký tự thứ 5 trở đi ta được một Array [ 'W', 'o', 'r', 'l', 'd' ]
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -2140,13 +2475,13 @@ _Answer_and_Explain:
 3. Total amount left in account: 3600 Total amount left in account: 3300
 4. Total amount left in account: 5600 Total amount left in account: 5600
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // khi sử dụng bind() đã tạo ra một function mới do dó đã nhận property của object barAccount thay vì nhận property của object fooAccount
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {

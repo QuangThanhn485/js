@@ -5,7 +5,7 @@ function countChar(String, char) {
 function cleanString(str = "", kt) {
   return str
     .toLowerCase()
-    .split(" ")
+    .split("")
     .filter((char) => {
       if (char === kt) {
         return true;
@@ -15,4 +15,4 @@ function cleanString(str = "", kt) {
     .sort()
     .join("");
 }
-countChar('naninani','n')
+countChar('naninai','n')
