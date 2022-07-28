@@ -1,16 +1,11 @@
-(function () {
-  "use strict";
-
-  var person = {
-    name: "John",
-  };
-  person.salary = "10000$";
-  person["country"] = "USA";
-
-  Object.defineProperty(person, "phoneNo", {
-    value: "8888888888",
-    enumerable: true,
-  });
-
-  console.log(Object.keys(person));
+(() => {
+  let x, y;
+  try {
+    throw new Error();
+  } catch (x) {
+    (x = 1), (y = 2);
+    console.log(x);
+  }
+  console.log(x);
+  console.log(y);
 })();

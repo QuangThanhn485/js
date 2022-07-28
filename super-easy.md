@@ -631,7 +631,7 @@ console.log(
 ```
 kết quả in ra là 
 3628800
-phía trên dùng toán tử 3 ngôi kết hợp với đệ quy , nếu n > 1 = true thì thực hiện n *f(n-1) cứ như vậy n mỗi lần chạy trên vòng lặp đệ quy nó sẽ giảm đi 1 giá trị 10 , 9 , 8 ... 1 . và sau đó bắt đầu return ra giá trị của n * f(n-1) cứ như vậy giá trị được nhân lênh nhiều lần 10 vòng đệ quy kết quả cuối cùng là 3628800
+phía trên dùng toán tử 3 ngôi kết hợp với đệ quy , nếu n > 1 = true thì thực hiện n *f(n-1) cứ như vậy n mỗi lần chạy trên vòng lặp đệ quy nó sẽ giảm đi 1 giá trị (10 , 9 , 8 ... 1) . và sau đó bắt đầu return ra giá trị của n * f(n-1) cứ như vậy giá trị được nhân lênh nhiều lần trong 10 vòng đệ quy kết quả cuối cùng là 3628800
 ```
 
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
@@ -668,8 +668,7 @@ console.log(hero.getSecretIdentity()); // Explain
 ```
 ```
 kết quả in ra 
-undefined // ở đây tại vì nó gọi ngay đến function phía trong nên nó không đọc được giá trị của biến _name
-John Doe 
+undefined John Doe // từ khóa this chỉ có tác dụng sử dụng trong cùng 1 scope  lấy ra ngoài phải thông qua object hero (hero.) vì this hiện tại đang trỏ đến các property của object này
 ```
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
@@ -692,7 +691,7 @@ obj.method(fn, 1);
 ```
 ```
 kết quả in ra 
-undefined // ở đây dùng từ khóa this là thuộc về global nên nó không nhận được giá trị của biến lenght
+undefined // ở đây dùng từ khóa this là thuộc về scope bên trong function (vì function cũng được coi là 1 object) nên nó không nhận được giá trị của biến lenght
 2 // arguments nó lấy giá trị theo tham số truyền vào và được truy cập như kiểu array, vì đã gọi đến function fn (trong hàm này có sử dụng this.lenght) nên nó lấy ra độ dài của phần tử bênh trong và trả về giá trị là 2 (vì đã truyền vào 2 tham số)
 
 ```
@@ -719,7 +718,7 @@ undefined // ở đây dùng từ khóa this là thuộc về global nên nó kh
 ```
 in màng hình
 1 // lấy giá trị từ biến x
-undefined // không thể lấy giá trị của biến x (kiểu var) vì phạm vi của biến x nằm trong scoped khối catch()
+undefined // không thể lấy giá trị của biến x vì phạm vi của biến x nằm trong scope khối catch() (đây là tham só truyền vào của khối catch())
 2 // lấy dược vì đây là golbal
 
 ```
@@ -737,7 +736,7 @@ girl();
 ```
 in ra
 undefined
-bởi vì có 2 biến trùng tên nhau nên sẽ nhận biến nằm trong cùng scoped nhưng biến x cùng scoped này lại khai báo sau khi log, nên nó không nhận được giá trị
+bởi vì var có Tính chất hoisting nên nó được khai báo nhưng không khởi tạo giá trị trên đầu 1 scope nên trường hợp trên sẽ nhận được giá trị là undefined
 ```
 
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
@@ -748,8 +747,8 @@ console.log(3 > 2 > 1); // Explain
 ```
 ```
 in ra
-true // vì 2 lớn hơn 1 và nhỏ hơn 3 nên kết quả tra true
-false // vì nó so sánh 3>2 trả về true và tiếp tục true > 1 (cái này thì false)
+true // vì 2 lớn hơn 1 và nhỏ hơn 3 nên kết quả ra true
+false // vì nó so sánh 3>2 trả về true và tiếp tục true > 1 (số 1 trong bool tương ứng với false)  true > false (trả về false)
 ```
 
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
@@ -759,7 +758,7 @@ console.log(typeof typeof 1); // Explain
 ```
 ```
 kết quả in ra
-string // typeof in ra kiễu dữ liệu , sô 1 là kiểu number mà typeof 1 nó sẽ cho ra 'number' đây là kiểu string, nên tiếp tục dùng typeof thêm lần nữa nó sẽ trả về kết quả string
+string // typeof in ra kiễu dữ liệu , sô 1 là kiểu number mà "typeof 1" nó sẽ cho ra 'number' đây là kiểu string, nên tiếp tục dùng typeof thêm lần nữa nó sẽ trả về kết quả string
 ```
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
@@ -779,7 +778,7 @@ outer();
 ```
 in ra
 3
-vì nó nhận biến b trong cùng scoped mặc dù trước đó b có +1 nhưng nó đã được đặt lại là  =3 nên vẫn giữ nguyên.
+vì nó nhận biến b trong cùng scoped mặc dù trước đó b có +1 nhưng nó đã được đặt lại là  =3 nên vẫn giữ nguyên. bời vì var có Tính chất hoisting
 ```
 
 <div align="right">
@@ -806,7 +805,7 @@ const arr = [1, 2];
 arr.push(3); // Explain
 ```
 ```
-số 3 đã được thêm vào mảng arr, được thêm vào vị trí cuối cùng
+số 3 đã được thêm vào mảng arr, được thêm vào vị trí cuối cùng trong các phần từ của mảng
 ```
 
 ## . Q. ***Predict the output of the following JavaScript code? Please explain***
@@ -843,7 +842,7 @@ vì function thực hiện tính toán nhưng không trả về bất cứ cái 
 var arr = ["javascript", "typescript", "es6"];
 var searchValue = (value) => {
   return arr.filter((item) => {
-    return item.indexOf(value) > -1;
+    return item.indexOf(value) > -1; // không tìm thấy thì  = -1 lớn hơn -1 thì đã tìm thấy
   });
 };
 console.log(searchValue("script"));
@@ -1119,7 +1118,9 @@ var salary = "1000$";
 })();
 ```
 ```
-y chan câu phía trên
+in ra 
+Original salary was undefined // lúc đầu salary nhận giá trị undefiend nên nó in ra giá trị undefiend
+My New Salary 5000$ // lúc sau nó được gán lại bằng giá trị khác nen nó có giá tri là "5000$"
 ```
 
 <div align="right">
@@ -1158,7 +1159,7 @@ console.log(strA); // Explain
 ```
 in ra
 hi there
-vì nó log ra strA mà strA lúc này đang mang giá trị "hi there" cho dù strB có bị thay đổi vì biến thì nó lưu trữ trực tiếp giá trị lênh ô nhớ stack và độc lạp với nhau không như object (nó chứa địa chỉ trên stack trỏ tới cùng vùng nhớ trên heap)
+vì nó log ra strA mà strA lúc này đang mang giá trị "hi there" cho dù strB có bị thay đổi thì nó vẫn nằm ở vùng nhớ độc lập so với strA trên stack không như object (nó chứa địa chỉ trên stack trỏ tới cùng vùng nhớ trên heap)
 ```
 
 <div align="right">
@@ -1176,7 +1177,7 @@ console.log(objA); // Explain
 ```
 in ra
 { prop1: 90 }
-vì ban đầu "prop1 : 42" nhưng objB đã thay đổi nó khéo theo obj1 cũng bị thay đổi do (obj1 = obj2) (do đây là một object nên nó bị thay đổi theo như đã giải thích ở bài trước ) nên giá trị ban đầu đã đổi thành 42 thành 90
+vì cả 2 object đang trỏ đến cùng một giá trị trên bộ nhớ heap nên khi objB thay đổi thì giá trị này cũng thay đổi theo và lúc này objA cũng đang trỏ đến giá trị này nền khi ta log objA thì nó sẽ ra kết quả là prop1 :90
 ```
 ## . Q. ***What would be the output of following code? Please explain***
 
@@ -2165,7 +2166,7 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 
-_Answer_and_Explain:3 // this lúc này đang trỏ đến cái function lồng bênh trong nên nó ko lấy được giá trị property từ obj
+_Answer_and_Explain:3 // this lúc này đang trỏ đến cái function lồng bênh trong nên nó ko lấy được giá trị property từ obj do không cùng scope
 
 ## . Q. ***What would be the output of following code? Please explain***
 
@@ -2187,7 +2188,7 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: self.message is not defined
 
-_Answer_and_Explain: 2 // this lúc này tham chiếu tới obj ta cùng biến self để chứa giá trị của this đang tham chiếu tới nên bây h biến self đang mang giá trị và có thể sử dụng ở trong 1 đói tượng khác
+_Answer_and_Explain: 2 // this lúc này tham chiếu tới obj ta cùng biến self để chứa giá trị của this đang tham chiếu tới nên bây giờ biến self đang mang giá trị và có thể sử dụng ở trong 1 nơi khác (không cùng scope)
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2475,7 +2476,7 @@ _Answer_and_Explain: 4 // bởi vì filter trả về là một Array, điều k
 3. Total amount left in account: 3600 Total amount left in account: 3300
 4. Total amount left in account: 5600 Total amount left in account: 5600
 
-_Answer_and_Explain: 1 // khi sử dụng bind() đã tạo ra một function mới do dó đã nhận property của object barAccount thay vì nhận property của object fooAccount
+_Answer_and_Explain: 1 // khi sử dụng bind() đã tạo ra một function mới do dó this đã nhận property của object barAccount thay vì nhận property của object fooAccount
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
@@ -2511,13 +2512,13 @@ _Answer_and_Explain: 1 // khi sử dụng bind() đã tạo ra một function m�
 3. 5600 3300 5100
 4. undefined undefined undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // menthod apply() nó sử đổi object mà this đang trỏ tới và thay đổi luôn tham số truyền vào cho function
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -2547,13 +2548,13 @@ _Answer_and_Explain:
 3. 5600 3300 5100
 4. undefined undefined undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // method call() gọi function với object và this trỏ tới và các tham số truyền vào , điều này làm thay đổi property mà this đàng trỏ đến và chúng mang một giá trị khác
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function greetNewCustomer() {
@@ -2568,7 +2569,7 @@ _Answer_and_Explain:
 3. Window
 4. undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain:1 // nó đã truyền vào object nên this trong function sẽ trỏ đến đây
 
 ## Q. ***What would be the output of following code? Please explain***
 
@@ -2592,13 +2593,13 @@ getDataFromServer("www.google.com").then(function (name) {
 3. Reference Error
 4. fn is not defined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // gọi function và truyền tham số sau đó truy cập tiếp vào property của nó thông qua function chứa nó và tiếp tục truyền tham số cho property (function)
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -2640,13 +2641,13 @@ _Answer_and_Explain:
    [42, 23, 16, 15, 8, 2]
 4. Reference Error
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // vì ta đã thiết lập cách sắp sếp mặc định cho array trong function đầu tiên nên các function tiếp theo sử dụng sort thì đều trả về theo định nghĩa của sort trong function đầu tiên
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 (function () {
@@ -2666,9 +2667,9 @@ _Answer_and_Explain:
 3. Reference Error
 4. Uncaught TypeError: Cannot read property 'fullName' of undefined
 
-_Answer_and_Explain:
+_Answer_and_Explain: 4 // vì sau return ta đã dặt dấu ';' trong khi ta chưa định nghĩa là nó sẽ trả về cái gì còn cái ở dưới dược hiểu là 1 cái object nào đấy chứ không phải là cái cần trả về 
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function getNumber() {
@@ -2684,13 +2685,13 @@ console.log(numb);
 3. 2
 4. (2,4,5)
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // vì không thể trả về nhiều kết quả cùng lúc nên nó sẽ trả về cái cuối cùng , muốn trả về nhiều hơn 1 kết quả ta nên để nó vào array hoặc object nào đấy
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function getNumber() {
@@ -2706,9 +2707,9 @@ console.log(numb);
 3. ""
 4. 0
 
-_Answer_and_Explain:
+_Answer_and_Explain: 2 // bởi vì nó return nhưng không có giá trị được return
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function mul(x) {
@@ -2731,13 +2732,13 @@ console.log(mul(2)(3)[1](4));
 3. Reference Error
 4. 10, 6
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // truyền paramerter cho từng thành phần return bênh trong, paramerter truyền đến đâu thi kết quả return đến đấy
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function mul(x) {
@@ -2759,9 +2760,9 @@ console.log(mul(2)(3).sum(4));
 3. Reference Error
 4. 10, 6
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // khác với phía trên thay vì một array và truy cập vào theo chỉ số index , thì bây giờ là một object truy cập vào theo property
 
-## Q. ***What would be the output of following code? Please explain***
+## . Q. ***What would be the output of following code? Please explain***
 
 ```javascript
 function mul(x) {
@@ -2783,21 +2784,21 @@ console.log(mul(2)(3)(4)(5)(6));
 3. Reference Error
 4. Type Error
 
-_Answer_and_Explain:
+_Answer_and_Explain: 1 // cũng như trên ta truyền tham số lần lược cho các function bênh trong nó và ta dược kết quả trả về cuối cùng 
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the value of `foo`? Please explain***
+## . Q. ***What is the value of `foo`? Please explain***
 
 ```javascript
 var foo = 10 + "20";
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: giá trị mà foo mang là "1020" kiểu string vì munber + string = string
 
-## Q. ***How would you make this work? Please explain***
+## . Q. ***How would you make this work? Please explain***
 
 ```javascript
 add(2, 5); // 7
@@ -2805,28 +2806,42 @@ add(2)(5); // 7
 ```
 
 _Answer_and_Explain_and_Code:
+```
+function add( a , b)
+{
+  return a + b
+}
+
+function add(a)
+{
+  return function next(b)
+  {
+    return b;
+  }
+}
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What value is returned from the following statement? Please explain***
+## . Q. ***What value is returned from the following statement? Please explain***
 
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain:"goh angasal a m'i" //cho string thành array rồi đảo ngược array sau đó join trả về kiểu string
 
-## Q. ***What is the value of `window.foo`? Please explain***
+## . Q. ***What is the value of `window.foo`? Please explain***
 
 ```javascript
 window.foo || (window.foo = "bar");
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: error , object window không có property là foo (chưa định nghĩa)
 
-## Q. ***What is the outcome of the two alerts below? Please explain***
+## . Q. ***What is the outcome of the two alerts below? Please explain***
 
 ```javascript
 var foo = "Hello";
@@ -2837,23 +2852,22 @@ var foo = "Hello";
 alert(foo + bar);
 ```
 
-_Answer_and_Explain:
-
+_Answer_and_Explain: 'Hello World' chỉ có alert trong function là hoạt động, do nhân được cả 2 giá trị từ 2 biến foo và bar còn cái alert ở ngoài chỉ nhân dược giá trị từ foo, còn bar có đang nằm trong scope của function
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the value of `foo.length`? Please explain***
+## . Q. ***What is the value of `foo.length`? Please explain***
 
-```javascript
+```javascripts
 var foo = [];
 foo.push(1);
 foo.push(2);
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: bằng 2 vì foo đã thêm 2 element vào array nên lenght  =2
 
-## Q. ***What is the value of `foo.x`? Please explain***
+## . Q. ***What is the value of `foo.x`? Please explain***
 
 ```javascript
 var foo = { n: 1 };
@@ -2861,13 +2875,13 @@ var bar = foo;
 foo.x = foo = { n: 2 };
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: 'undefined' không thực hiện 2 phép gán liên tục được
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What does the following code print? Please explain***
+## . Q. ***What does the following code print? Please explain***
 
 ```javascript
 console.log("one");
@@ -2878,16 +2892,27 @@ console.log("three");
 ```
 
 _Answer_and_Explain:
+```
+one // cái này in ra đầu tiên như bình thường
+three // theo giải tích bênh dưới bất đồng bộ thì được sử lý riếng nên nó tạm cho setTimeOut qua nơi khác để sử lý
+two // setTimeout là một kiểu của bất đồng bộ nên nó được thực hiện sau cùng khi mà call stask trống thì cái này mới đi vào nên nó in ra sau cùng
+```
 
-## Q. ***What would be the result of 1+2+'3'? Please explain***
+## . Q. ***What would be the result of 1+2+'3'? Please explain***
 
-_Answer_and_Explain:
+_Answer_and_Explain: 33 // đầu tiên 1+2 =3 , sau đó 3+"3" = "33" number+ string = string
 
-## Q. ***Write a script that returns the number of occurrences of character given a string as input? Please explain***
+## . Q. ***Write a script that returns the number of occurrences of character given a string as input? Please explain***
 
 ```javascript
 function countCharacters(str) {
   return // one line only
+}
+console.log(countCharacters("the brown fox jumps over the lazy dog"));
+```
+```javascript
+function countCharacters(str ="") {
+  return str.split("").filter((char)=>{if(char==="t") return true ; else return false}).join("").length
 }
 console.log(countCharacters("the brown fox jumps over the lazy dog"));
 ```
@@ -2896,19 +2921,19 @@ console.log(countCharacters("the brown fox jumps over the lazy dog"));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What value is returned from the following statement? Please explain***
+## . Q. ***What value is returned from the following statement? Please explain***
 
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain:'goh angasal a m'i' cho ra kiểu array rồi dảo ngược sau đó join thành kiểu string
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What does the following code print? Please explain***
+## . Q. ***What does the following code print? Please explain***
 
 ```javascript
 console.log("one");
@@ -2918,18 +2943,18 @@ setTimeout(function () {
 console.log("three");
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: in ra one và three , two. Do two được thực hiện sau cùng bời vì nó là bất đồng bộ
 
-## Q. ***For which value of x the results of the following statements are not the same? Please explain***
+## . Q. ***For which value of x the results of the following statements are not the same? Please explain***
 
 ```javascript
 //  if( x <= 100 ) {...}
 if( !(x > 100) ) {...}
 ```
 
-_Answer_and_Explain:
+_Answer_and_Explain: 100 , với giá trị này thì chỉ có dòng trên thực hiện được còn phía duwois thì không
 
-## Q. ***What is g value? Please explain***
+## . Q. ***What is g value? Please explain***
 
 ```javascript
 f = g = 0;
@@ -2955,7 +2980,7 @@ f = g = 0;
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output? Please explain***
+## . Q. ***What will be the output? Please explain***
 
 ```javascript
 function b(b) {
@@ -2963,8 +2988,11 @@ function b(b) {
 }
 b(b.bind(b));
 ```
+```
+output undefined 
+```
 
-## Q. ***What will be the output? Please explain***
+## . Q. ***What will be the output? Please explain***
 
 ```javascript
 c = (c) => {
@@ -2972,16 +3000,22 @@ c = (c) => {
 };
 c(c.bind(c));
 ```
+```
+undefined, vì c chưa dược định nghĩa
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var g = 0;
 g = 1 && g++;
 console.log(g);
 ```
+```
+output 0
+```
 
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 !function(){}()
@@ -2991,8 +3025,11 @@ true && function(){}()
 function(){}
 !function(){}
 ```
+```
+error , không có tên function
+```
 
-## Q. ***What will expression return? Please explain***
+## . Q. ***What will expression return? Please explain***
 
 ```javascript
 var a = (b = true),
@@ -3001,8 +3038,10 @@ var a = (b = true),
   return a();
 })();
 ```
-
-## Q. ***Predict the output of the following JavaScript code? Please explain***
+```
+output [Function: c],
+```
+## . Q. ***Predict the output of the following JavaScript code? Please explain***
 
 ```javascript
 var a = true;
@@ -3010,8 +3049,10 @@ var a = true;
   return a;
 })();
 ```
-
-## Q. ***What will be the output? Please explain***
+```
+[Function: a] ,vì lúc này đã được gán cho một cái function
+```
+## . Q. ***What will be the output? Please explain***
 
 ```javascript
 var v = 0;
@@ -3025,12 +3066,14 @@ try {
   console.log(e()());
 }
 ```
-
+```
+output [Function: v], vì trong khối throw nó trả về v mà v hiện tại là function
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will the following code output? Please explain***
+## . Q. ***What will the following code output? Please explain***
 
 ```javascript
 const arr = [10, 12, 15, 21];
@@ -3040,8 +3083,16 @@ for (var i = 0; i < arr.length; i++) {
   }, 3000);
 }
 ```
+```
+Index: 4, element: undefined
+Index: 4, element: undefined
+Index: 4, element: undefined
+Index: 4, element: undefined
+không lấy được giá trị do là index hiện tại là 4 mà cái mảng đấy chỉ có 3 index, do cơ chế bất đồng bộ nên khi vòng lặp chạy xong rồi thì i lúc này bằng 4 bậy giờ mới đi sử lý cái setTimeOut và nó lấy index =4 bỏ vào nên không thể tìm thấy (do làm gì có index 4 cái mảng nó chỉ có tối đa 3 index)
+```
 
-## Q. ***What will be the output of the following code? Please explain***
+
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var output = (function (x) {
@@ -3051,33 +3102,46 @@ var output = (function (x) {
 
 console.log(output);
 ```
-
-## Q. ***What will be the output of the following code? Please explain***
+```
+output 0, do truyền vào tham số = 0 nên nó trả về bằng 0, còn 'delete x' nó chỉ xóa được property của object và trả về true hoặc false
+```
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var Employee = {
   company: "xyz",
 };
-var emp1 = Object.create(Employee);
+var emp1 = Object.create(Employee); // chổ này đã tạo ra một mô nhớ mới trên heap (hiểu như bản copy) của object Emploiy
 delete emp1.company;
 console.log(emp1.company);
+```
+```
+output xyz, chính vì trước đó đã tạo ra một object mới nên khi xóa đi thì nó vẫn còn object ban đầu để trỏ đến 
 ```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Make this work:
+## . Q. ***Make this work:
 
 ```javascript
 duplicate([1, 2, 3, 4, 5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
+```
+function duplicate(arr =[])
+{
+  let arr1 = arr.concat(arr)
+  return arr1
+}
+console.log(duplicate([1, 2, 3, 4, 5]));
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Fix the bug using ES5 only? Please explain***
+## . Q. ***Fix the bug using ES5 only? Please explain***
 
 ```javascript
 var arr = [10, 32, 65, 2];
@@ -3087,12 +3151,21 @@ for (var i = 0; i < arr.length; i++) {
   }, 3000);
 }
 ```
+```
+var arr = [10, 32, 65, 2];
+setTimeout(function () {
+  {
+    for (var i = 0; i < arr.length; i++)
+      console.log("The index of this number is: " + i);
+  }
+}, 3000);
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 console.log(eval("10 + 10")); // Explain
@@ -3105,8 +3178,15 @@ console.log(eval(10 + "5 + 5")); // Explain
 
 console.log(eval(10 + "5 + 5 + 5")); // Explain
 ```
+```
+20  // cộng 2 sô như bình thường
+515 // cộng chuỗi số 5 và số 10 ta dược 510 mang 510 + 5 = 515
+520 // cộng chuỗi số 5 với số 10 ta được 510 cộng số 5 với số 5 được số 10, tiếp tục 10 + 510 = 520
+110
+115
+```
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 var x = 10;
@@ -3118,49 +3198,54 @@ var c = eval("x + 30") + "<br>";
 let result = a + b + c;
 console.log(result); // Explain
 ```
-
+```
+output
+200<br>4<br>40<br>
+vì 10 * 20 = 200 +<br> ="200<br>". Tương tự với 2 cái còn lại
+ta được dãy "200<br>"+"4<br>"+"40<br>"
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What will be the output of the following code? Please explain***
+## . Q. ***What will be the output of the following code? Please explain***
 
 ```javascript
 // Example 01:
 var prices = [12, 20, 18];
 var newPriceArray = [...prices];
-console.log(newPriceArray);
+console.log(newPriceArray); // output [ 12, 20, 18 ]
 
 // Example 02:
 var alphabets = ["A", ..."BCD", "E"];
-console.log(alphabets);
+console.log(alphabets); //output [ 'A', 'B', 'C', 'D', 'E' ]. dấu '...' đây là phép toáng cộng array gộp lại với nhau
 
 // Example 03:
 var prices = [12, 20, 18];
 var maxPrice = Math.max(...prices);
-console.log(maxPrice);
+console.log(maxPrice); //output 20 Lấy ra số lớn nhất trong mảng
 
 // Example 04:
 var max = Math.max(..."43210");
-console.log(max);
+console.log(max); //output 4, lấy ra số lớn nhất (số 4) trong array
 
 // Example 05:
 const fruits = ["apple", "orange"];
 const vegetables = ["carrot", "potato"];
 
 const result = ["bread", ...vegetables, "chicken", ...fruits];
-console.log(result);
+console.log(result); // output [ 'bread', 'carrot', 'potato', 'chicken', 'apple', 'orange' ]. dấu '...' có tác dụng nối array
 
 // Example 06:
 const country = "USA";
-console.log([...country]);
+console.log([...country]);//output [ 'U', 'S', 'A' ],'...' chuyển string thành array
 ```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Given and object and property path. Get value from property path***
+## . Q. ***Given and object and property path. Get value from property path***
 
 ```javascript
 function getPropertyValue(TEMP_OBJECT, path) {
@@ -3177,8 +3262,8 @@ let srcObject = {
              },
               '1' : {
                 'host' : '54.232.123',
-             },
              'port' : 3307
+             },
               '2' : {
                 'host' : '54.232.123',
              }
@@ -3189,20 +3274,34 @@ path = "system.database.1.port";
 
 //Output: 3307
 ```
+```
+function getPropertyValue(TEMP_OBJECT, path ="") {
+    let pathh =  path.split(".")
+    let returnn = TEMP_OBJECT[pathh[0].toString()][pathh[1].toString()][pathh[2].toString()][pathh[3].toString()]
+    return returnn
+  }
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How to filter object from Arrays of Objects***
+## . Q. ***How to filter object from Arrays of Objects***
+```
+sử dụng filter() để lọc theo diều kiện
+```
 
-## Q. ***How to replace all the occurrences of string***
-
+## . Q. ***How to replace all the occurrences of string***
+```
+```
+sử dụng replace() để thay thế 1 ký tự đầu tiên tìm được , sử dụng replaceAll() để thay thế toàn bộ
+```
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Write a script that returns the number of occurrences of character given a string as input***
+## . Q. ***Write a script that returns the number of occurrences of character given a string as input***
 
 ```javascript
 function countCharacters(str) {
@@ -3210,16 +3309,37 @@ function countCharacters(str) {
 }
 console.log(countCharacters("the brown fox jumps over the lazy dog"));
 ```
-
+``` javascript
+function countCharacters(str = "") {
+  const arr = str.split("");
+  const uniqueChars = [...new Set(arr)].sort().join("");
+  for (let i = 0; i < uniqueChars.length; i++) {
+    const charDuplicate = arr.filter((char) => {
+      if (char === uniqueChars[i]) return true;
+      else return false;
+    });
+    console.log([...new Set(charDuplicate)] + " : " + charDuplicate.length);
+  }
+}
+countCharacters("the brown fox jumps over the lazy dog")
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***write a script that return the number of occurrences of a character in paragraph***
+## . Q. ***write a script that return the number of occurrences of a character in paragraph***
 
 ```javascript
 function charCount(str, searchChar) {
   
+}
+console.log(charCount("the brown fox jumps over the lazy dog", "o"));
+```
+```javascript
+function charCount(str = "", searchChar="") {
+  const arr =  str.split("")
+  let charduplicate = arr.filter((char)=>{if(char === searchChar)return true ; else return false})
+  return charduplicate.length
 }
 console.log(charCount("the brown fox jumps over the lazy dog", "o"));
 ```
@@ -3228,7 +3348,7 @@ console.log(charCount("the brown fox jumps over the lazy dog", "o"));
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Recursive and non-recursive Factorial function***
+## . Q. ***Recursive and non-recursive Factorial function***
 
 ```javascript
 function recursiveFactorial(n) {
@@ -3243,12 +3363,31 @@ function factorial(n) {
 
 console.log(factorial(5));
 ```
+```javascript
+// sử dụng đệ quy
+function recursiveFactorial(n) {
+  return n !== 0 ? n  * recursiveFactorial(n-1) : n + 1
+}
 
+console.log(recursiveFactorial(5));
+```
+```javascript
+// không sử dụng đệ quy
+function factorial(n) {
+  let ketqua = 1;
+  for(let i = n ; i > 0 ; i--)
+  {
+    ketqua *= i;
+  }
+  return ketqua;
+}
+console.log(factorial(5));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Memoization fibonnaci-sequence***
+## . Q. ***Memoization fibonnaci-sequence***
 
 ```javascript
 // 1, 1, 2, 3, 5, 8, 13, 21, 34
@@ -3260,18 +3399,42 @@ function fibonnaci(num, memo = {}) {
 
 console.log(fibonnaci(5)); // 8
 ```
+```javascript
+function fibonnaci(num, memo = {}) {
+  let arr = [];
+  for (let i = 0; i < num; i++) {
+    if (i === 0) {
+      arr[i] = i;
+      continue;
+    }
+    if (i === 1) {
+      arr[i] = i;
+      continue;
+    }
+    arr[i] = arr[i - 1] + arr[i - 2];
+  }
+  return arr;
+}
+console.log(fibonnaci(5));
 
-## Q. ***Random Number between min and max***
+```
+
+## . Q. ***Random Number between min and max***
 
 ```javascript
 // 5 to 7 - One line only
+function random(min, max)
+{
+    return  Math.floor(Math.random() * (max - min + 1)) + min;
+}
+console.log(random(1,7))
 ```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Reverse the number***
+## . Q. ***Reverse the number***
 
 ```javascript
 function reverse(num) {
@@ -3280,12 +3443,26 @@ function reverse(num) {
 
 console.log(reverse(12345));
 ```
+```javascript
+function reversedNum(num) {
+    return (
+      parseFloat(
+        num
+          .toString()
+          .split('')
+          .reverse()
+          .join('')
+      ) * Math.sign(num)
+    )                 
+  }
+console.log(reversedNum(12345))
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Remove Duplicate elements from Array***
+## . Q. ***Remove Duplicate elements from Array***
 
 ```javascript
 var arr = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
@@ -3297,12 +3474,27 @@ console.log(removeDuplicates(arr)); // ["1", "2", "3", "5", "8", "9"] // O(n)
 // Es6
 
 ```
+```javascript
+var arr = [1, 2, 3, 5, 1, 5, 9, 1, 2, 8];
+function removeDuplicates(arr) {
+    var obj = {};
+    var ret_arr = [];
+    for (var i = 0; i < arr.length; i++) {
+        obj[arr[i]] = true;
+    }
+    for (var key in obj) {
+        ret_arr.push(key);
+    }
+    return ret_arr;
+}
+console.log(removeDuplicates(arr));
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Deep copy of object or clone of object with and without a function***
+## . Q. ***Deep copy of object or clone of object with and without a function***
 
 ```javascript
 function deepExtend(out = {}) {
@@ -3314,12 +3506,37 @@ function deepExtend(out = {}) {
 console.log(deepExtend({}, { a: 1, b: { c: 2, d: 3 } }; // { e: 4, b: { f: 1 } }));
 //output : { a: 1, b: {c: 2, d: 3, f: 1}, e: 4 }
 ```
+```javascript
+function isObject(item) {
+  return item && typeof item === "object" && !Array.isArray(item);
+}
 
+function mergeDeep(target, source) {
+  let output = Object.assign({}, target);
+
+  if (isObject(target) && isObject(source)) {
+    Object.keys(source).forEach((key) => {
+      if (isObject(source[key])) {
+        if (!(key in target)) {
+          Object.assign(output, { [key]: source[key] });
+        } else {
+          output[key] = mergeDeep(target[key], source[key]);
+        }
+      } else {
+        Object.assign(output, { [key]: source[key] });
+      }
+    });
+  }
+  return output;
+}
+
+console.log(mergeDeep({ a: 1, b: { c: 2, d: 3 } }, { e: 4, b: { f: 1 } }));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Sort ticket based on flying order.***
+## . Q. ***Sort ticket based on flying order.***
 
 ```javascript
 "use strict";
@@ -3341,13 +3558,15 @@ new SortTickets({
   Rio: "ND",
 });
 ```
-
+```
+hông hiểu đề đang muốn cái gì và phải làm sao
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Concurrent execute function based on input number***
-
+## . Q. ***Concurrent execute function based on input number***
+?????????????????????
 ```javascript
 function concurrent(num) {
   
@@ -3384,19 +3603,29 @@ c.start();
 ```javascript
 let a = [1, 2, 3, 4, 5];
 
-//Approach 1:
+//Approach 1: using reverse()
 
 
 //Approach 2:
+var reverse = function(array){
+    var arrayOne = array
+    var array2 = [];
+
+    for (var i = arrayOne.length-1; i >= 0; i--){
+      array2.push(arrayOne[i])
+    } 
+    return array2
+}
+
 
 
 console.log(reverse);
 ```
 
-## Q. ***Rotate 2D array***
+## . Q. ***Rotate 2D array***
 
 ```javascript
-const transpose = "One line only"
+const transpose  = m => m[0].map((x,i) => m.map(x => x[i]));  "One line only"
 
 console.log(
   transpose([
@@ -3407,7 +3636,7 @@ console.log(
 );
 ```
 
-## Q. ***Get Column from 2D Array***
+## . Q. ***Get Column from 2D Array***
 
 ```javascript
 const getColumn = "One line only"
@@ -3420,6 +3649,22 @@ const twoDimensionalArray = [
 
 console.log(getColumn(twoDimensionalArray, 1)); //Result = [2,5,8]
 ```
+```javascript
+function getColumn(matrix, col){
+    var column = [];
+    for(var i=0; i<matrix.length; i++){
+       column.push(matrix[i][col]);
+    }
+    return column;
+ }
+ const twoDimensionalArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+  ];
+  
+  console.log(getColumn(twoDimensionalArray, 1)); 
+```
 
 ## Q. ***Get top N from array***
 
@@ -3430,12 +3675,22 @@ function topN(arr, num) {
 
 console.log(topN([1, 8, 3, 4, 5], 2)); // [5,8]
 ```
-
+```javascript
+const topN = (arr = [], num = 1) => {
+    if(num > arr.length){
+       return [];
+    };
+    const sorter = (a, b) => b - a;
+    const descendingCopy = arr.slice().sort(sorter);
+    return descendingCopy.splice(0, num);
+ };
+ console.log(topN([1, 8, 3, 4, 5], 2));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Get query params (SQL) from Object***
+## . Q. ***Get query params (SQL) from Object***
 
 ```javascript
 function getQueryParams(obj) {
@@ -3450,12 +3705,24 @@ console.log(
   })
 );
 ```
+```javascript
+function getQueryParams(obj) {
+    return 'SELECT * form obj'
+}
+console.log(
+  getQueryParams({
+    name: "Umesh",
+    tel: "48289",
+    add: "3333 emearld st",
+  })
+);
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Consecutive 1's in binary***
+## . Q. ***Consecutive 1's in binary***
 
 ```javascript
 function consecutiveOne(num) {
@@ -3465,12 +3732,38 @@ function consecutiveOne(num) {
 //5 = 101 = 1
 console.log(consecutiveOne(5)); //1
 ```
+```javascript
+function consecutiveOne(num) {
+  let arr = casebinary(num).map((item)=>{return parseInt(item,2)})
+    let left = 0;
+    let right = 0;
+    let max = 0;
+    while (right < arr.length) {
+       if (arr[right] === 0) {
+          if (right - left > max) {
+             max = right - left
+          };
+          right++;
+          left = right;
+       } else {
+          right++
+       };
+    };
+    return right - left > max ? right - left : max;
+}
+function casebinary(num)
+{
+  let arr = Number(num).toString(2).split("")
+  return arr;
+}
+console.log(consecutiveOne(5))
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Spiral travesal of matrix***
+## . Q. ***Spiral travesal of matrix***
 
 ```javascript
 var input = [
@@ -3485,12 +3778,94 @@ var spiralTraversal = function (matriks) {
 };
 console.log(spiralTraversal(input)); // [1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10]
 ```
+```javascript
+function spiralTraversal(array) {
+  let discovered = new Set();
+  let result = [];  
+  let totalSpots = array.length * array[0].length;
+  let direction = 'right';
+
+  for (var i = 0; i < array.length; i ++) {
+    for (var j = 0; j < array[i].length; j++) {   
+
+      while (totalSpots) {
+        while (direction === 'right' && !!bounds(array, i, j) && !discovered.has(array[i][j])) {  
+          discovered.add(array[i][j]);                        
+          result.push(array[i][j]);
+          totalSpots--;                            
+          j++;                         
+
+        }
+
+        direction = 'down';  
+        i++;
+        j--;
+
+
+        while (direction === 'down' && !!bounds(array,i, j) && !discovered.has(array[i][i])) {      
+          discovered.add(array[i][j]);                    
+          result.push(array[i][j]);
+          totalSpots--;          
+          i++;                                           
+        }
+
+
+        direction = 'left';  
+        j--;
+        i--;
+
+
+        while (direction === 'left' && !!bounds(array, i, j) && !discovered.has(array[i][j])) {  
+          discovered.add(array[i][j]);                    
+          result.push(array[i][j]);
+          totalSpots--;       
+          j--;                         
+        }
+
+
+        direction = 'up';          
+        i--;
+        j++
+
+
+        while (direction === 'up' && bounds(array, i, j) && !discovered.has(array[i][j])) {
+          discovered.add(array[i][j]);          
+          result.push(array[i][j]);
+          totalSpots--;          
+          i--;                                   
+        }
+
+        direction = 'right';        
+        j++;
+        i++;
+
+      }          
+    }
+  }
+  return result;
+}
+
+function bounds(array, i, j){
+  if (i < array.length && i >= 0 && j < array[0].length && j >= 0) {
+    return true;
+  } else {
+    return false;
+  }
+};
+var input = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
+console.log(spiralTraversal(input));
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Merge Sorted array and sort it.***
+## . Q. ***Merge Sorted array and sort it.***
 
 ```javascript
 function mergeSortedArray(arr1, arr2) {
@@ -3499,12 +3874,30 @@ function mergeSortedArray(arr1, arr2) {
 
 console.log(mergeSortedArray([1, 2, 3, 4, 5, 6], [0, 3, 4, 7])); // [0, 1, 2, 3, 4, 5, 6, 7]
 ```
+```javascript
+function mergeSortedArray(arr1, arr2) {
+  let arr3 = [...arr1,...arr2].sort()
+  return remove_duplicates(arr3)
+}
+function remove_duplicates(arr) {
+  var obj = {};
+  var ret_arr = [];
+  for (var i = 0; i < arr.length; i++) {
+      obj[arr[i]] = true;
+  }
+  for (var key in obj) {
+      ret_arr.push(key);
+  }
+  return ret_arr;
+}
 
+console.log(mergeSortedArray([1, 2, 3, 4, 5, 6], [0, 3, 4, 7]));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Anagram of words***
+## . Q. ***Anagram of words***
 
 ```javascript
 const alphabetize = (word) => word.split("").sort().join("");
@@ -3523,26 +3916,83 @@ console.log(
 //  how: ["how", "who"]
 // }
 ```
+```JAVASCRIPT
+var words = ["map", "art", "how", "rat", "tar", "who", "pam", "shoop"],
+    map = {};
 
-<div align="right">
-    <b><a href="#">↥ back to top</a></b>
-</div>
+var normalizedWords = words.map( function( word ){
+  return word.split('').sort().join('');
+});
 
-## Q. ***Print the largest (maximum) hourglass sum found in 2d array.***
+normalizedWords.forEach( function ( normalizedWord, index){
+  map[normalizedWord] = map[normalizedWord] || [];
+  map[normalizedWord].push( words[index] );
+});
 
-```javascript
-// if arr 6 X 6 then iterate it till 4 X 4  [reduce by two]
-// if arr 8 X 8 then iterate it till 6 X 6  [reduce by two]
-function main(arr) {
-  console.log(maxScore);
-}
+Object.keys( map ).forEach( function( normalizedWord , index  ){
+  var combinations = map[normalizedWord];
+  if( combinations.length > 1 ){
+    console.log( combinations[0] + ": " + combinations.join(' ') );
+  }
+});
 ```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Transform array of object to array***
+## . Q. ***Print the largest (maximum) hourglass sum found in 2d array.***
+x x x
+  x
+x x x
+
+
+```javascript
+i -> n- 2
+
+// if arr 6 X 6 then iterate it till 4 X 4  [reduce by two]
+// if arr 8 X 8 then iterate it till 6 X 6  [reduce by two]
+function main(arr) {
+  console.log(maxScore);
+}
+```
+```javascript
+let numbers = [
+  [1, 1, 1, 1, 1, 1],
+  [2, 2, 2, 2, 2, 2],
+  [3, 3, 3, 3, 3, 3],
+  [4, 4, 4, 4, 4, 4],
+  [5, 5, 5, 5, 5, 5],
+  [6, 6, 6, 6, 6, 6],
+];
+(function main(arr, x) {
+  let maxScore = 0;
+  let score = 0;
+  for (let i = 0; i < arr.length; i = i + x) {
+    for (let j = 0; j < arr.length; j = j + x) {
+      let valueTotal =
+        arr[i][j] +
+        arr[i][j + 1] +
+        arr[i][j + 2] +
+        //
+        arr[i + 1][j + 1] +
+        //
+        arr[i + 2][j] +
+        arr[i + 2][j + 1] +
+        arr[i + 2][j + 2];
+      score = valueTotal > score ? valueTotal : score;
+    }
+  }
+  maxScore = score;
+  console.log(maxScore); //35
+})(numbers, 3);
+
+```
+<div align="right">
+    <b><a href="#">↥ back to top</a></b>
+</div>
+
+## . Q. ***Transform array of object to array***
 
 ```javascript
 let data = [
@@ -3591,7 +4041,7 @@ obj.callPrivateFunction(); // this is private function
 </div>
 
 ## Q. ***Flatten only Array not objects***
-
+. todo
 ```javascript
 function flatten(arr, result = []) {
   return result;
@@ -3628,13 +4078,31 @@ function maxDifference(arr) {
 
 console.log(maxDifference([1, 2, 4])); // [1 - 4 ] = 3
 ```
+```javascript
+function maxDifference(arr) {
+  let maxDiff = Math.max.apply(null,arr) - Math.min.apply(null,arr)
+  return maxDiff;
+}
 
+console.log(maxDifference([1, 2, 4]));
+```
 ## Q. ***swap two number in ES6 [destructing]***
 
 ```javascript
 let a = 10,
   b = 5;
 [a, b] = [b, a];
+```
+```javascript
+let a = 10,
+  b = 5;
+  console.log(`The value of a before swapping: ${a}`);
+  console.log(`The value of b before swapping: ${b}`);
+//using destructuring assignment
+[a, b] = [b, a];
+
+console.log(`The value of a after swapping: ${a}`);
+console.log(`The value of b after swapping: ${b}`);
 ```
 
 <div align="right">
@@ -3668,12 +4136,27 @@ function romanize(num) {
 
 console.log(romanize(3)); // III
 ```
-
+```javascript
+function romanize (num) {
+  if (isNaN(num))
+      return NaN;
+  var digits = String(+num).split(""),
+      key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+             "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+             "","I","II","III","IV","V","VI","VII","VIII","IX"],
+      roman = "",
+      i = 3;
+  while (i--)
+      roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+  return Array(+digits.join("") + 1).join("M") + roman;
+}
+console.log(romanize(3));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***check if parenthesis is malformed or not***
+## . Q. ***check if parenthesis is malformed or not***
 
 ```javascript
 function matchParenthesis(str) {
@@ -3682,13 +4165,16 @@ function matchParenthesis(str) {
 
 console.log(matchParenthesis("}{{}}"), matchParenthesis("{{[]}}")); // false - true
 ```
+```
+sai ngay từ dấu ngoặc "}" đầu tiên trong phần truyền tham số, ở log
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Create Custom Event Emitter class***
-
+## . Q. ***Create Custom Event Emitter class***
+. todo
 ```javascript
 class EventEmitter {
   
@@ -3709,7 +4195,7 @@ e.emit("callme", ["a", "b"], { firstName: "umesh", lastName: "gohil" });
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Max value from an array***
+## . Q. ***Max value from an array***
 
 ```javascript
 const arr = [-2, -3, 4, 3, 2, 1];
@@ -3717,12 +4203,18 @@ const arr = [-2, -3, 4, 3, 2, 1];
 
 // Do the Slower Way
 ```
+```javascript
+const arr = [-2, -3, 4, 3, 2, 1];
+console.log(
+   Math.max.apply(null,arr)
+)
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***search function called after 500 ms***
+## . Q. ***search function called after 500 ms***
 
 ```javascript
 <input type="text" class="search" />;
@@ -3742,7 +4234,7 @@ search.addEventListener("keyup", function () {
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Move all zero's to end***
+## . Q. ***Move all zero's to end***
 
 ```javascript
 const moveZeroToEnd = (arr) => {
@@ -3751,12 +4243,19 @@ const moveZeroToEnd = (arr) => {
 
 console.log(moveZeroToEnd([1, 8, 2, 0, 0, 0, 3, 4, 0, 5, 0])); // [1, 8, 2, 3, 4, 5, 0, 0, 0, 0, 0]
 ```
+```javascript
+const moveZeroToEnd = (arr=[]) => {
+  
+  return arr.sort((a,b)=>{return b -a});
+};
 
+console.log(moveZeroToEnd([1, 8, 2, 0, 0, 0, 3, 4, 0, 5, 0]));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Decode message in matrix [diagional down right, diagional up right]***
+## . Q. ***Decode message in matrix [diagional down right, diagional up right]***
 
 ```javascript
 const decodeMessage = (mat) => {
@@ -3772,12 +4271,40 @@ let mat = [
 
 console.log(decodeMessage(mat)); //IROELEA
 ```
+```javascript
+const decodeMessage = (mat = []) => {
+  let beetween = Math.floor(mat[0].length / 2);
+  let message = [];
+  let i = 0;
+  for (let j = 0; j < mat[0].length; j++) {
+    //message.push(j <= beetween ? mat[j][j] : mat[j - (i = i + 1)][j]);
+    if (j <= beetween)
+    {
+      message.push(mat[j][j])
+    }
+    else 
+    {
+      i++
+      message.push(mat[j - i][j])
+    }
+  }
+  return message.join("");
+};
 
+let mat = [
+  ["I", "B", "C", "A", "L", "K", "A"],
+  ["D", "R", "F", "C", "A", "E", "A"],
+  ["G", "H", "O", "E", "L", "A", "D"],
+  ["G", "H", "O", "E", "L", "A", "D"],
+];
+
+console.log(decodeMessage(mat));
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***find a pair in array, whose sum is equal to given number.***
+## . Q. ***find a pair in array, whose sum is equal to given number.***
 
 ```javascript
 const hasPairSum = (arr, sum) => {
@@ -3790,12 +4317,26 @@ console.log(hasPairSum([1, 2, 4, 4], 8)); // [2,3]
 // NOTE: if array is not sorted then subtract the value with sum and store in difference
 // then see if that value exist in difference then return true.
 ```
+``` javascript
+const hasPairSum = (arr = [], sum) => {
+  arr.sort((a, b) => {
+    return b - a;
+  });
+  if (arr[0] + arr[1] < sum) {
+    return null;
+  } else {
+    return  [arr[0],arr[1]];
+  }
+};
+console.log(hasPairSum([1, 2, 4, 5], 8)); // null
+console.log(hasPairSum([1, 2, 4, 4], 8));
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Binary Search [Array should be sorted]***
+## . Q. ***Binary Search [Array should be sorted]***
 
 ```javascript
 function binarySearch(arr, val) {
@@ -3819,12 +4360,33 @@ function pascalTriangle(n) {
 
 console.log(pascalTriangle(2));
 ```
+```javascript
+const pascalTriangle = n => {
+  const arr = []
+  
+  for (let i = 0; i < n; i++) {
+      const row = [1]
+      
+      for (let j = 1; j < i; j++) {
+          row.push(arr[i-1][j-1] + arr[i-1][j])
+      }
+      
+      if( i > 0 ) row.push(1)
+      
+      arr.push(row)
+  }
+  
+  return arr
+}
+
+console.log(pascalTriangle(6))
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Explain the code below. How many times the createVal function is called?***
+## . Q. ***Explain the code below. How many times the createVal function is called?***
 
 ```javascript
 function createVal() {
@@ -3837,6 +4399,9 @@ function fun(val = createVal()) {
 
 fun();
 fun(5);
+```
+```
+được gọi 1 lần, gọi ở phần tham số truyền vào của hàm fun, khi chương trình đọc thanm số đầu vào cùng lúc đó hàm createVal cũng được gọi
 ```
 
 <div align="right">
@@ -3861,11 +4426,14 @@ sayHi();
 - C: `ReferenceError` and `21`
 - D: `undefined` and `ReferenceError`
 
+```
+B : sử dụng Let nó không có cơ chế hoisting, nên nó không lấy được giá trị còn var thì có cơ chế này nên nó nhận được
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 for (var i = 0; i < 3; i++) {
@@ -3880,12 +4448,15 @@ for (let i = 0; i < 3; i++) {
 - A: `0 1 2` and `0 1 2`
 - B: `0 1 2` and `3 3 3`
 - C: `3 3 3` and `0 1 2`
-
+```
+C :vì ở vòng lặp đầu tiên ta dùng biến var nên nó được khai báo ở ngoài ( do cơ chế hoisting ) và setTimeOut là hầm bất đồng bộ nên là nó chờ bênh ngoài vì lúc này biến i đã liên tục thay đổi giá trị của nó khi nó đang thực hiện bieenh ngoài nên kết quả cuối dùng mà nó nhận được là toàn là 3
+còn ở vòng lặp thứ 2 biến i sử dụng let nên nó chỉ có tác dụng trong scope của nó nên cứ mỗi vòng lặp xãy ra biến i của  setTimeOut bênh ngoài không bị thay đổi bởi i trong vòng lặp ( vì dùng let) 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const shape = {
@@ -3904,12 +4475,14 @@ console.log(shape.perimeter());
 - B: `20` and `NaN`
 - C: `20` and `63`
 - D: `NaN` and `63`
-
+```
+B : cái đầu tiên hàm diameter this hoạt động bình thường do ở trong cùng object, cái thứ 2 cũng là function như cái đầu tiên nhưng mà trong ES2015 không có cung cấp sử dụng this cho hàm mũi tên
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 +true;
@@ -3919,12 +4492,14 @@ console.log(shape.perimeter());
 - A: `1` and `false`
 - B: `false` and `NaN`
 - C: `false` and `false`
-
+```
+A : vì số 1 là được hiểu là truthy nên ra true ngược lại ở đây ta thêm dấu '+' đằng trước thì nó hiểu là số nên từ true nó trả về giá trị số là 1. vì "lydia" cũng là truthy nhưng thêm dấu '!' đằng trước nên nó hiểu đây là kiểu boolean và đảo ngược từ true thành false
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Which one is true? Please explain***
+## . Q. ***Which one is true? Please explain***
 
 ```javascript
 const bird = {
@@ -3941,12 +4516,14 @@ const mouse = {
 - B: `mouse[bird.size]` is not valid
 - C: `mouse[bird["size"]]` is not valid
 - D: All of them are valid
-
+```
+A : đây là không hợp lệ vì không thể truy cập từ object này sang object khác được
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 let c = { greeting: "Hey!" };
@@ -3962,12 +4539,14 @@ console.log(d.greeting);
 - C: `undefined`
 - D: `ReferenceError`
 - E: `TypeError`
-
+```
+A : vì ta thấy c là object mà object giá trị thực nó chỉ dược lưu trên heap và dược ô nhớ trên stack trỏ tới. Gán d = c, lúc này ta đã tạo ra một địa chỉ tham chiếu mới trên stack và trỏ đến cùng ô nhớ trên heap, khi ta thay đổi giá trị ô nhớ này thì dĩ nhiêu d trỏ đến thì cũng bị thay dổi giá trị thành 'hello'
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 let a = 3;
@@ -3988,7 +4567,7 @@ console.log(b === c);
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 class Chameleon {
@@ -4010,7 +4589,9 @@ console.log(freddie.colorChange("orange"));
 - B: `purple`
 - C: `green`
 - D: `TypeError`
-
+```
+D : vì ta đã khởi tạo một object mới từ class Chameleon và tạo cho object này 1 property khác, hoàn toàn không có cái menthod nào ở đây
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -4026,12 +4607,14 @@ console.log(greetign);
 - A: `{}`
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
-
+```
+A : nếu không tạo property bênh trong thì object này sẽ rỗng
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What happens when we do this? Please explain***
+## . Q. ***What happens when we do this? Please explain***
 
 ```javascript
 function bark() {
@@ -4045,12 +4628,14 @@ bark.animal = "dog";
 - B: `SyntaxError`. You cannot add properties to a function this way.
 - C: `"Woof"` gets logged.
 - D: `ReferenceError`
-
+```
+A : function được tạo ra và chưa bao giờ được gọi
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function Person(firstName, lastName) {
@@ -4070,12 +4655,14 @@ console.log(member.getFullName());
 - B: `SyntaxError`
 - C: `Lydia Hallie`
 - D: `undefined` `undefined`
-
+```
+A : trong object hiện tại chỉ chứa 2 property và không có cái menthod nào 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function Person(firstName, lastName) {
@@ -4094,12 +4681,14 @@ console.log(sarah);
 - B: `Person {firstName: "Lydia", lastName: "Hallie"}` and `Person {firstName: "Sarah", lastName: "Smith"}`
 - C: `Person {firstName: "Lydia", lastName: "Hallie"}` and `{}`
 - D:`Person {firstName: "Lydia", lastName: "Hallie"}` and `ReferenceError`
-
+```
+A : cái đầu tiên nhân dược giá trị là vì nó đã khởi tạo mới một object và gán parameter cho nó, còn cái phía dưới là do không sử dụng từ khóa 'new' nên đối tượng không được tạo mới
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What are the three phases of event propagation? Please explain***
+## . Q. ***What are the three phases of event propagation? Please explain***
 
 - A: Target > Capturing > Bubbling
 - B: Bubbling > Target > Capturing
@@ -4107,21 +4696,26 @@ console.log(sarah);
 - D: Capturing > Target > Bubbling
 
 <img src="https://i.imgur.com/N18oRgd.png" width="200">
-
+```
+B
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***All object have prototypes.***
+## . Q. ***All object have prototypes.***
 
 - A: true
 - B: false
 
+```
+B
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function sum(a, b) {
@@ -4135,12 +4729,14 @@ sum(1, "2");
 - B: `TypeError`
 - C: `"12"`
 - D: `3`
-
+```
+C : đây là cộng chuỗi 1 + "2" = "12"
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 let number = 0;
@@ -4153,12 +4749,16 @@ console.log(number);
 - B: `1` `2` `2`
 - C: `0` `2` `2`
 - D: `0` `1` `2`
-
+```
+C : number++ nó trả về giá trị ban đầu trước khi tăng 1
+++ number nó tăng lênh 1 giá trị rồi sau đó trả về (trước đó number tăng lênh 1 rồi nên bây h tăng nữa là thành 2)
+number in ra giá trị number hiện tại
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function getPersonInfo(one, two, three) {
@@ -4176,12 +4776,14 @@ getPersonInfo`${person} is ${age} years old`;
 - A: `"Lydia"` `21` `["", " is ", " years old"]`
 - B: `["", " is ", " years old"]` `"Lydia"` `21`
 - C: `"Lydia"` `["", " is ", " years old"]` `21`
-
+```
+B : ở đây ta sử dụng Tagged template trong ES6, Template string có các thành phần nằm ngoài dấu {} đều trờ thành các element trong mảng và truyền vào paramater (ở đối số đầu tiên) trong function các đối số tiếp theo sẽ được truyền giá trị của các thành phần trong dấu '{}'
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function checkAge(data) {
@@ -4200,12 +4802,14 @@ checkAge({ age: 18 });
 - A: `You are an adult!`
 - B: `You are still an adult.`
 - C: `Hmm.. You don't have an age I guess`
-
+```
+C : 2 câu if ban đầu so sách không bằng nhau và trả về giá trị false là vì (đây là object) và nó so sánh trên vùng nhớ stack mà ở đây trên vùng nhớ này là 2 địa chỉ nhớ khác nhau (dùng để trỏ đến giá trị trên heap) nên nó sẽ cho ra kết quả false, 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function getAge(...args) {
@@ -4219,7 +4823,9 @@ getAge(21);
 - B: `"array"`
 - C: `"object"`
 - D: `"NaN"`
-
+```
+C : ta đã biết array là thuộc về kiểu object nên nó trả về kiểu object là điều không hề khó hiểu
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
@@ -4240,12 +4846,14 @@ getAge();
 - B: `undefined`
 - C: `ReferenceError`
 - D: `TypeError`
-
+```
+ D : do age chưa được khai báo kiểu ( chỉ hiển thị lỗi này khi sử dụng strict mode)
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is value of `sum`? Please explain***
+## . Q. ***What is value of `sum`? Please explain***
 
 ```javascript
 const sum = eval("10*10+5");
@@ -4255,12 +4863,14 @@ const sum = eval("10*10+5");
 - B: `"105"`
 - C: `TypeError`
 - D: `"10*10+5"`
-
+```
+A : phương thức eval dùng để thực thi mã bênh trong kiểu string nên trường hợp ở trên nó tiến hành tính toán như bình thường
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***How long is cool_secret accessible? Please explain***
+## . Q. ***How long is cool_secret accessible? Please explain***
 
 ```javascript
 sessionStorage.setItem("cool_secret", 123);
@@ -4270,12 +4880,14 @@ sessionStorage.setItem("cool_secret", 123);
 - B: When the user closes the tab.
 - C: When the user closes the entire browser, not only the tab.
 - D: When the user shuts off their computer.
-
+```
+B 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 var num = 8;
@@ -4288,12 +4900,15 @@ console.log(num);
 - B: `10`
 - C: `SyntaxError`
 - D: `ReferenceError`
+```
+B : vì nó nhận vào giá trị được truyền vào cuối cùng
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const obj = { 1: "a", 2: "b", 3: "c" };
@@ -4309,12 +4924,14 @@ set.has(1);
 - B: `false` `true` `true` `true`
 - C: `true` `true` `false` `true`
 - D: `true` `true` `true` `true`
-
+```
+C : kiểm tra xem obj có tồn tại cái key này hay không nếu có thì trả về true không thì false, và set thì kiểm tra xem có giá trị nào như vậy tồn tại không
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const obj = { a: "one", b: "two", a: "three" };
@@ -4325,22 +4942,26 @@ console.log(obj);
 - B: `{ b: "two", a: "three" }`
 - C: `{ a: "three", b: "two" }`
 - D: `SyntaxError`
-
+```
+D : chỉ nhân giá trị cuối cùng được gán vào cho key ( nếu có bị trùng tên key)
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.***
+## . Q. ***The JavaScript global execution context creates two things for you: the global object, and the "this" keyword.***
 
 - A: true
 - B: false
 - C: it depends
-
+```
+B : vì this không có phạm vi là toàn cục nó chỉ hoạt động trong scope
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 for (let i = 1; i < 5; i++) {
@@ -4353,12 +4974,14 @@ for (let i = 1; i < 5; i++) {
 - B: `1` `2` `3`
 - C: `1` `2` `4`
 - D: `1` `3` `4`
-
+```
+C : vì nó đã bỏ qua số 3, vì nếu 'i === 3' thì nó sẽ 'continue' ( nó sẽ bỏ qua vòng lặp này và thực hiện vòng lặp tiếp theo )
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 String.prototype.giveLydiaPizza = () => {
@@ -4374,12 +4997,14 @@ name.giveLydiaPizza();
 - B: `TypeError: not a function`
 - C: `SyntaxError`
 - D: `undefined`
-
+```
+A : bời cả 2 đều nằm trong object là window nên có thể truy cập tới được
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const a = {};
@@ -4396,12 +5021,14 @@ console.log(a[b]);
 - B: `456`
 - C: `undefined`
 - D: `ReferenceError`
-
+```
+B : vì array nó cũng là một object nên nó có các tính chất của 1 object như chỉ lưu trử dữ liệu trên heap và địa chỉ con trỏ nằm trên stack, ở đây ta thấy object từ đầu đến cuối chỉ có 1 ô nhớ trên heap và có 2 địa chỉ đang tham chiếu đến đây là a[b] và a[c] 1 trong 2 , nên 1 trong 2 thay đổi giá trị thì cả hai sẽ bị thay đổi
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const foo = () => console.log("First");
@@ -4417,12 +5044,14 @@ baz();
 - B: `First` `Third` `Second`
 - C: `Second` `First` `Third`
 - D: `Second` `Third` `First`
-
+```
+B : menthod 'setTimeOut()' nó là bất đồng bộ nên nó sẽ được sử lý ở một mơi khác rồi cho vào hàng đợi khi các tiến trình chính hoàn thành xong tất cả thì task này mới được cho vào hiển thị thông qua even loop
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the event.target when clicking the button? Please explain***
+## . Q. ***What is the event.target when clicking the button? Please explain***
 
 ```html
 <div onclick="console.log('first div')">
@@ -4436,12 +5065,14 @@ baz();
 - B: Inner `div`
 - C: `button`
 - D: An array of all nested elements.
-
+```
+B : in ra log cho tất cả các element trong thẻ <div> ngoài cùng
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***When you click the paragraph, What is the logged output? Please explain***
+## . Q. ***When you click the paragraph, What is the logged output? Please explain***
 
 ```html
 <div onclick="console.log('div')">
@@ -4453,12 +5084,15 @@ baz();
 - B: `div` `p`
 - C: `p`
 - D: `div`
+```
+B : in ra từ thẻ ngoài cùng vào trong
+```
 
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const person = { name: "Lydia" };
@@ -4475,12 +5109,14 @@ sayHi.bind(person, 21);
 - B: `function` `function`
 - C: `Lydia is 21` `Lydia is 21`
 - D: `Lydia is 21` `function`
-
+```
+D : vì sử dụng call thì nó sẽ thực thi hàm ngay lúc đấy luôn , còn bind thì nó sẽ tạo ta 1 cái hàm mới và hàm này chỉ thực thi khi được gọi hoặc sử dụng
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 function sayHi() {
@@ -4494,12 +5130,14 @@ console.log(typeof sayHi());
 - B: `"number"`
 - C: `"function"`
 - D: `"undefined"`
-
+```
+B: vì hàm sayHi nó đã trả về 1 function khác function này lại trả về số 0 , số 0 là kiểu munber
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***Which of these values are falsy? Please explain***
+##  . Q. ***Which of these values are falsy? Please explain***
 
 ```javascript
 0;
@@ -4514,12 +5152,16 @@ undefined;
 - B: `0`, `new Number(0)`, `''`, `new Boolean(false)`, `undefined`
 - C: `0`, `''`, `new Boolean(false)`, `undefined`
 - D: All of them are falsy
+```
+A : có 7 ký loại được hiểu là falsy
+ 0 , 0n , null , undefined , false , NaN , ""
 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 console.log(typeof typeof 1);
@@ -4529,12 +5171,14 @@ console.log(typeof typeof 1);
 - B: `"string"`
 - C: `"object"`
 - D: `"undefined"`
-
+```
+B : dùng typeof lần đầu là trả về 'number' (kiểu string ) lần thứ 2 là in ra kiểu trả về của typeof lần đầu là 'string'
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 const numbers = [1, 2, 3];
@@ -4546,12 +5190,14 @@ console.log(numbers);
 - B: `[1, 2, 3, 11]`
 - C: `[1, 2, 3, 7 x empty, 11]`
 - D: `SyntaxError`
-
+```
+C : vì index của numbers có tối đa 3 cái , và nó đã truyền vào indext thứ 10 giá trị 11, điều này đã tạo ra hàng loạt element trống cụ thể là 7 cái 
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
 
-## Q. ***What is the output? Please explain***
+## . Q. ***What is the output? Please explain***
 
 ```javascript
 (() => {
@@ -4571,7 +5217,9 @@ console.log(numbers);
 - B: `undefined` `undefined` `undefined`
 - C: `1` `1` `2`
 - D: `1` `undefined` `undefined`
-
+```
+A : vì biến x có scope là ở trong khối catch, còn biến y do khai báo trên đầu nên nó có scope là trong một funciton nên sẽ log ra được giá trị của biến y
+```
 <div align="right">
     <b><a href="#">↥ back to top</a></b>
 </div>
